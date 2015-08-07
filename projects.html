@@ -18,7 +18,9 @@ nav: projects
                             <span class="cardtexts">{{ post.subtitle }}</span>
                         </div>
                         <div class="col l2 m2 s2">
-                            <img src="{{ post.icon }}" class="circle responsive-img" width="70">
+                            {% if post.icon %}
+                                <img src="{{ post.icon }}" class="circle responsive-img" width="70">
+                            {% endif %}
                         </div>
                     </div>
                 </div>

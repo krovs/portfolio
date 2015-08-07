@@ -38,6 +38,10 @@ $footer-text:                 #ff8a80!important;
     color: $accent-color;
 }
 
+a{
+    color: $accent-color;
+}
+
 
 /* Footer --------------------------------------------- */
 body {
@@ -84,11 +88,8 @@ body {
  .texts{
      color: $main-color;
      font-size: 20px;
-     a{
-         color: $accent-color;
-     }
- }
 
+ }
 
  /* Nav -------------------------------------------- */
  .navcolor{
@@ -211,9 +212,9 @@ body {
 }
 .postbuttoncolor{
     background-color: $secondary-color;
-    //-webkit-box-shadow: none!important;
-    //-moz-box-shadow: none!important;
-    //box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
     color: $button-text;
 }
 
