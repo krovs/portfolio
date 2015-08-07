@@ -15,9 +15,9 @@ defeat all the enemies and collect items along three different levels.
 
 <br>
 <div class="row">
-    <div class="col l8 offset-l2 m8 offset-m2 s12">
-        <img class="responsive-img materialboxed"  src="/images/casualwizardss.png">
-    </div>
+<div class="col l8 offset-l2 m8 offset-m2 s12">
+<img class="responsive-img materialboxed"  src="/images/casualwizardss.png">
+</div>
 </div>
 <br>
 
