@@ -14,11 +14,13 @@ This is my first game and was my university final project. A simple game where t
 defeat all the enemies and collect items along three different levels.
 
 <br>
+
 <div class="row">
 <div class="col l8 offset-l2 m8 offset-m2 s12">
-<img class="responsive-img materialboxed"  src="/images/casualwizardss.png">
+<img class="responsive-img materialboxed" src="/images/casualwizardss.png">
 </div>
 </div>
+
 <br>
 
 <a class="waves-effect waves-light btn postbuttoncolor" href="https://play.google.com/store/apps/details?id=com.krovs.casualwizard"><i class="fa fa-android"> </i> gplay</a>

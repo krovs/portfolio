@@ -9,3 +9,4 @@ timezone: Europe/Madrid
 permalink: pretty
 # Build settings
 markdown: kramdown
+encoding: utf-8
