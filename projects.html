@@ -1,0 +1,29 @@
+---
+layout: page
+title: Projects
+nav: projects
+---
+
+<br>
+<div class="container">
+
+    <div class="row">
+        {% for post in site.posts %}
+            {% if post.categories contains 'projects' %}
+            <div class="col l10 offset-l1 m12 s12">
+                <div class="card-panel flatcard hoverable">
+                    <div class="row valign-wrapper">
+                        <div class="col l10 m10 s10">
+                            <h5><a href="{{ post.url }}" class="cardheads">{{ post.title }}</a></h5>
+                            <span class="cardtexts">{{ post.subtitle }}</span>
+                        </div>
+                        <div class="col l2 m2 s2">
+                            <img src="{{ post.icon }}" class="circle responsive-img" width="70">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,27 @@
+
+<footer class="page-footer footercolor no-pad">
+
+    <div class="progress fbbarcolor" style="height:1px;margin:0;padding:0">
+        <div class="indeterminate fbarcolor"></div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container footerlinks">
+            <img src="/images/ghsquareicon.png" width="25px">
+            <img src="/images/rbsquareicon.png" width="25px">
+            <img src="/images/andsquareicon.png" width="25px">
+            <!-- <img src="/images/linkedinsquareicon.png" width="25px"> -->
+        </div>
+    </div>
+</footer>
+
+<script>
+    jQuery(document).ready(function(){
+        $('.materialboxed').materialbox();
+
+        $('.button-collapse').sideNav();
+
+        //add active to current nav item ( nav variable )
+        $("#{{ page.nav }}").addClass("navactive");
+    });
+</script>

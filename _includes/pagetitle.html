@@ -1,0 +1,14 @@
+
+    <div class="container">
+        <br>
+
+        <div class="row">
+            {% if page.categories contains 'projects' %}
+                <h3 class="header heads"><a class="heads" href="{{site.baseurl}}/projects.html"> <i class="fa fa-caret-left red-text text-accent-1"></i> Projects</a></h3>
+            {% else %}
+                <h3 class="header heads">{{ page.title }}</h3>
+            {% endif %}
+
+        </div>
+
+    </div>
