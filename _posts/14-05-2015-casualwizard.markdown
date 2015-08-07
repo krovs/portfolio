@@ -5,7 +5,7 @@ subtitle: "A 3D adventure game for Android"
 date: 14-06-2015
 categories: projects
 icon: /images/casualwizard.png
-permalink: /:title
+permalink: /casualwizard
 ---
 
 Casual Wizard is a 3D adventure game for Android made with Unity3D.
