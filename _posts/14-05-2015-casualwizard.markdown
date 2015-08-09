@@ -23,5 +23,5 @@ defeat all the enemies and collect items along three different levels.
 
 <br>
 
-<a class="waves-effect waves-light btn postbuttoncolor" href="https://play.google.com/store/apps/details?id=com.krovs.casualwizard"><i class="fa fa-android"> </i> gplay</a>
-<a class="waves-effect waves-light btn postbuttoncolor" href="https://github.com/krovs/casual-wizard"><i class="fa fa-github"> </i> github</a>
+<a class="waves-effect waves-light btn postbuttoncolor" target="_blank"  href="https://play.google.com/store/apps/details?id=com.krovs.casualwizard"><i class="fa fa-android"> </i> gplay</a>
+<a class="waves-effect waves-light btn postbuttoncolor" target="_blank" href="https://github.com/krovs/casual-wizard"><i class="fa fa-github"> </i> github</a>
