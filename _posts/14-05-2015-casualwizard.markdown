@@ -4,7 +4,7 @@ title:  "Casual Wizard"
 subtitle: "A 3D adventure game for Android"
 date: 14-06-2015
 categories: projects
-icon: /images/casualwizard.png
+icon: /images/cwicon.png
 permalink: /casualwizard
 ---
 
@@ -17,7 +17,7 @@ defeat all the enemies and collect items along three different levels.
 
 <div class="row">
 <div class="col l8 offset-l2 m8 offset-m2 s12">
-<img class="responsive-img materialboxed" src="/images/casualwizardss.png">
+<img class="responsive-img materialboxed" src="/images/cw1.png">
 </div>
 </div>
 
