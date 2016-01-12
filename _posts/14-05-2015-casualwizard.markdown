@@ -10,8 +10,8 @@ permalink: /casualwizard
 
 Casual Wizard is a 3D adventure game for Android made with Unity3D.
 
-This is my first game and was my university final project. A simple game where the player has to
-defeat all the enemies and collect items along three different levels.
+This is my first game and was my university final project. A simple 3D game where the player controls a wizard who has to
+defeat all the enemies while collecting items along three different levels.
 
 <br>
 
