@@ -8,22 +8,22 @@ icon: /images/drwicon.png
 permalink: /drwent
 ---
 
-Drwent is a very simple Android app that helps you view and track all the *Gwent* cards from The Witcher 3. It also shows each card image, ability, location and related quest.
-It's free and has no ads, you can download it from Google Play.
+Drwent is a very simple Android app that helps you view and track all the **Gwent** cards from The Witcher 3. It also shows each card image, ability, location and related quest.
+It's **free with no ads**, you can download it from Google Play.
 
-****Updated! Now with Hearts of Stone new cards!****
+**Updated! Now with Hearts of Stone new cards!**
 
 
 <br>
 
-With Drwent you can:
+With **Drwent** you can:
 
-*   Check your collection
-*   View each cards
-*   Track the location
-*   Learn the abilities
-*   Know if it's from a quest
-*   Know if it's from a DLC
+* Check your collection
+* View each cards
+* Track the location
+* Learn the abilities
+* Know if it's from a quest
+* Know if it's from a DLC
 
 <br>
 
