@@ -1,28 +1,36 @@
+<footer>
+    <div class="container footerlinks">
 
-<footer class="page-footer footercolor no-pad">
+        {% if page.nav != 'home' %}
+            <hr>
+            2016 | Robert Krovs [ jekyll, jQuery, Sass, Bootstrap ]
+        {% endif %}
 
-    <div class="progress fbbarcolor" style="height:1px;margin:0;padding:0">
-        <div class="indeterminate fbarcolor"></div>
     </div>
 
-    <div class="footer-copyright">
-        <div class="container footerlinks">
-            <a href="https://github.com/krovs" target="_blank"><img src="/images/ghsocial.png" width="25px"></a>
-            <a href="http://www.redbubble.com/people/rkrovs" target="_blank"><img src="/images/rbsocial.png" width="25px"></a>
-            <a href="https://play.google.com/store/apps/developer?id=Krovs" target="_blank"><img src="/images/andsocial.png" width="25px"></a>
-            <!-- <img src="/images/linkedinsquareicon.png" width="25px">
-            <span class="right">made with <3</span> -->
-        </div>
-    </div>
 </footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
 
 <script>
     jQuery(document).ready(function(){
-        $('.materialboxed').materialbox();
-
-        $('.button-collapse').sideNav();
-
-        //add active to current nav item ( nav variable )
+        //add active class to the current nav item ( jekyll nav variable )
         $("#{{ page.nav }}").addClass("navactive");
-    });
+
+        $('.thumbnail').click(function(){
+            event.preventDefault();
+          	$('.modal-body').empty();
+          	var title = $(this).parent('a').attr("title");
+          	$('.modal-title').html(title);
+            $($(this).html()).appendTo('.modal-body');
+          	$('#myModal').modal({show:true});
+        });
+
+	});
+
 </script>

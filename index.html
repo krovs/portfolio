@@ -4,24 +4,47 @@ permalink: /
 nav: home
 ---
 
-<div class="container indexcont">
+<div class="container hicont">
+    <div class="row indextexts">
 
-    <div class="section no-pad-bot center">
-        <h1 class="header rkrovs"><img src="/images/logo.png" class="responsive-img mainlogo"> Krovs()</h1>
-        <h4 class="header col s12 subrkrovs">
-            <a href="https://github.com/krovs" target="_blank"><img src="/images/ghsocial.png" class="socialicon"></a>
-            <a href="http://www.redbubble.com/people/rkrovs" target="_blank"><img src="/images/rbsocial.png" class="socialicon"></a>
-            <a href="https://play.google.com/store/apps/developer?id=Krovs" target="_blank"><img src="/images/andsocial.png" class="socialicon"></a>
-            <!-- <img src="/images/linkedinsquareicon.png" class="socialicon"> -->
-        </h4>
+        <p align="center">
+            <img src="/images/me.png" class="img-responsive himage">
+        </p>
+
+        <p align="center" class="hipara">
+            Hi!, I'm <b>Robert</b>.
+        </p>
+
+        <p align="center" class="hipara">
+            I'm a software engineer, master's degree student and gamer. I like <b>coding</b> things and <b>learning</b> new stuff.
+        </p>
+
+        <p align="center">
+            Check out my <a href="{{site.baseurl}}/projects">portfolio.</a>
+        </p>
+
     </div>
 
-    <div class="section thingy">
+    <hr class="indexhr">
+
+    <div class="row indextexts">
+
         {% for post in site.posts limit:1 %}
-            <h4 class="center grey-text text-darken-1 latest">latest thingy  <i class="small mdi-hardware-keyboard-arrow-right red-text text-accent-1"></i>
-                <a href="{{ post.url }}"><span class="light blue-grey-text text-lighten-2 latest2">{{ post.title }}</span></a>
+            <h4 class="indexlatest">
+                <small>latest thingy
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </small>
             </h4>
         {% endfor %}
+
+    </div>
+
+    <div class="row indexicons">
+        <a href="https://github.com/krovs" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a href="https://play.google.com/store/apps/developer?id=Krovs" target="_blank"><i class="fa fa-android fa-2x"></i></a>
+        <a href="http://www.redbubble.com/people/rkrovs" target="_blank"><i class="fa fa-circle fa-2x"></i></a>
+        <a href="mailto:krovs.dev@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
     </div>
 
 </div>

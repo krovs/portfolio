@@ -1,32 +1,67 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-    {% include head.html %}
-    {% include googleana.html %}
 
-    <body>
-        <main>
-            {% include header.html %}
+<div class="container postcont">
+    <div class="row">
 
-            {% include pagetitle.html %}
+        <h2 class="posttitle"><a class="pcaret" href="{{site.baseurl}}/projects"><i class="fa fa-caret-left fa-lg"> </i></a> {{ page.title }}</h2>
+        <h6 class="pdate">
+            <span class="glyphicon glyphicon-time" aria-hidden="true"> </span> {{ page.date | date: '%d.%m.%Y' }}
+            <span class="minibuttons">
+                {% if page.gplay %}
+                    <a class="btn btn-custom-small btn-xs" href="{{ page.gplay }}" role="button"><i class="fa fa-android"></i> Install</a>
+                {% endif %}
 
-            <div class="container center">
-                <div class="section no-pad-top" id="index-banner">
-                    <h1 class="heads no-pad-top posttitle">{{ page.title }}</h1>
-                    <h6 class="accentcolor">{{ page.date | date: '%d.%m.%Y' }}</h6>
-                    <br>
-                    {% if page.subtitle %}
-                        <h3 class="heads postsubtitle">{{ page.subtitle }}</h3>
-                    {% endif %}
-                </div>
+                {% if page.ghub %}
+                    <a class="btn btn-custom-small btn-xs" href="{{ page.ghub }}" role="button"><i class="fa fa-code"></i> Code</a>
+                {% endif %}
 
-                <div class="section texts center" align="justify">
-                    {{ content }}
+                {% if page.link %}
+                    <a class="btn btn-custom-small btn-xs" href="{{ page.link }}" role="button"><i class="fa fa-link"></i> Web</a>
+                {% endif %}
+            </span>
+        </h6>
+
+        {% if page.subtitle %}
+            <h3 class="postsubtitle">{{ page.subtitle }}</h3>
+        {% endif %}
+
+
+        <div class="posttext">
+            {{ content }}
+        </div>
+
+
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:white;"></span></button>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ><span aria-hidden="true">&times;</span></button>
+                    </div>
                 </div>
             </div>
-        </main>
+        </div>
 
-        {% include footer.html %}
 
-    </body>
-</html>
+        <div class="pbuttons">
+            {% if page.gplay %}
+                <a class="btn btn-custom btn-lg" href="{{ page.gplay }}" role="button"><i class="fa fa-android fa-lg"></i> Install</a>
+            {% endif %}
+
+            {% if page.ghub %}
+                <a class="btn btn-custom btn-lg" href="{{ page.ghub }}" role="button"><i class="fa fa-code fa-lg"></i> Code</a>
+            {% endif %}
+
+            {% if page.link %}
+                <a class="btn btn-custom btn-lg" href="{{ page.link }}" role="button"><i class="fa fa-link fa-lg"></i> Web</a>
+            {% endif %}
+        </div>
+
+
+    </div>
+</div>

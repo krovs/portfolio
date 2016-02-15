@@ -4,17 +4,16 @@ title:  "Drwent"
 subtitle: "A simple Gwent card viewer for Android"
 date: 14-06-2015
 categories: projects
-icon: /images/drwicon.png
+gplay: "https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"
 permalink: /drwent
 ---
 
 Drwent is a very simple Android app that helps you view and track all the **Gwent** cards from The Witcher 3. It also shows each card image, ability, location and related quest.
 It's **free with no ads**, you can download it from Google Play.
 
-**Updated! Now with Hearts of Stone new cards!**
-
-
 <br>
+**Updated! Now with Hearts of Stone new cards!**
+<br><br>
 
 With **Drwent** you can:
 
@@ -26,23 +25,24 @@ With **Drwent** you can:
 * Know if it's from a DLC
 
 <br>
-
 I have permission to use The Witcher 3 Gwent artwork from CD PROJEKT RED.
-
-
 
 <br>
 
 <div class="row">
-    <div class="col l3 offset-l3 m4 offset-m2 s4 offset-s2">
-        <img class="responsive-img materialboxed" src="/images/drw1.png">
+    <div class="col-xs-6 col-sm-4 col-md-4">
+        <a href="#" class="thumbnail">
+             <img src="/images/drw1.png" class="img-responsive">
+        </a>
     </div>
-    <div class="col l3 m4 s4">
-        <img class="responsive-img materialboxed" src="/images/drw2.png">
+     <div class="col-xs-6 col-sm-4 col-md-4">
+        <a href="#" class="thumbnail">
+             <img src="/images/drw2.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+        <a href="#" class="thumbnail">
+             <img src="/images/drw3.png" class="img-responsive">
+        </a>
     </div>
 </div>
-
-<br>
-
-
-<a class="waves-effect waves-light btn postbuttoncolor" target="_blank" href="https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"><i class="fa fa-android"> </i> gPlay</a>

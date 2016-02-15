@@ -4,7 +4,7 @@ title:  "MeteoTrad"
 subtitle: "An english/spanish/greek dictionary"
 date: 14-03-2014
 categories: projects
-icon: /images/meteoicon.png
+link: http://meteotrad.com
 permalink: /meteotrad
 ---
 
@@ -16,12 +16,12 @@ The usage is very simple, select what you want to know, the source language, typ
 
 <br>
 
+
+
 <div class="row">
-<div class="col l8 offset-l2 m8 offset-m2 s12">
-<img class="responsive-img materialboxed" src="/images/meteo1.png">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <a href="#" class="thumbnail">
+            <img src="/images/meteo1.png" class="img-responsive">
+        </a>
+    </div>
 </div>
-</div>
-
-<br>
-
-<a class="waves-effect waves-light btn postbuttoncolor" target="_blank"  href="http://meteotrad.com"><i class="fa fa-globe"> </i> web</a>

@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-{% include head.html %}
-{% include googleana.html %}
+<div class="container pagecont">
+    <div class="row" >
+        <h3 class="pagetitle">{{ page.title }}</h3>
+    </div>
 
-<body>
-    <main>
+    <hr class="pagehr">
 
-        {% include header.html %}
+    {{ content }}
 
-
-        {% include pagetitle.html %}
-
-
-
-        {{ content }}
-
-    </main>
-
-    {% include footer.html %}
-
-
-</body>
-
-
-</html>
+</div>
