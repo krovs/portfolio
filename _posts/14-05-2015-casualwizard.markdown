@@ -19,7 +19,7 @@ defeat all the enemies while collecting items along three different levels.
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <a href="#" class="thumbnail">
-            <img src="/images/cw2.png" class="img-responsive">
+            <img src="/images/cw1.png" class="img-responsive">
         </a>
     </div>
 </div>
