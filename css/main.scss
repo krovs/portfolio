@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
 
 // variables
 $background-color:          #f6f6f6!important;
@@ -13,6 +13,10 @@ $bold-color:                #574957!important;
 $btnhover-color:            #dbdbdb!important;
 $footer-color:              #a298a2!important;
 
+@font-face {
+    font-family: Ubuntu;
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
 
 body {
     display: flex;
@@ -47,7 +51,7 @@ h1,h2,h3,h4 {
 // Index ------------------------------------------ */
 
 .indextexts {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Ubuntu;
     color: $text-color;
     font-size: 18px;
     line-height: 35px;
