@@ -30,17 +30,17 @@ I have permission to use The Witcher 3 Gwent artwork from CD PROJEKT RED.
 <br>
 
 <div class="row">
-    <div class="col-xs-6 col-sm-4 col-md-4">
+    <div class="col-xs-4 col-sm-4 col-md-4">
         <a href="#" class="thumbnail">
              <img src="/images/drw1.png" class="img-responsive">
         </a>
     </div>
-     <div class="col-xs-6 col-sm-4 col-md-4">
+     <div class="col-xs-4 col-sm-4 col-md-4">
         <a href="#" class="thumbnail">
              <img src="/images/drw2.png" class="img-responsive">
         </a>
     </div>
-    <div class="col-xs-6 col-sm-4 col-md-4">
+    <div class="col-xs-4 col-sm-4 col-md-4">
         <a href="#" class="thumbnail">
              <img src="/images/drw3.png" class="img-responsive">
         </a>
