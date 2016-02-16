@@ -9,9 +9,10 @@ permalink: /drwent
 ---
 
 Drwent is a simple Android app that helps you view and track all the **Gwent** cards from The [Witcher 3](http://thewitcher.com/witcher3). It also shows each card image, ability, location and related quest.
+
 It's **free with no ads**, you can download it from Google Play.
-I made it mostly for learning reasons when I was in the middle of my first playthrough of TW3 looking for cards, I wanted a list-type companion app so I could see which cards
-I was missing.
+I made it mostly for learning reasons when I was in the middle of my first playthrough of TW3 looking for cards. I wanted a list-type companion app so I could see which cards
+I was missing and where to get them.
 
 I used a SQLite database for storing all the artwork, better than a web service in this case, since the data is not going to be frequently updated.
 
