@@ -2,7 +2,7 @@
 layout: post
 title:  "Rabanoid"
 subtitle: "Check the transport schedule for Rabanales (Córdoba)"
-date: 14-06-2015
+date: 28-06-2016
 categories: projects
 gplay: "https://play.google.com/store/apps/details?id=com.krovs.rabanoid"
 permalink: /rabanoid
