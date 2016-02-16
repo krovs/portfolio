@@ -10,13 +10,11 @@ permalink: /meteotrad
 
 MeteoTrad is an english/spanish/greek meteorology dictionary for translators.
 
-The frontend is made with PHP, jQuery and Bootstrap, and the backend with PHP and MySQL. This was my first time working with PHP and, maybe my last.
+The frontend is made with PHP, jQuery and Bootstrap, and the backend with PHP and MySQL. This was my first time working with PHP and, maybe, my last.
 
 The usage is very simple, select what you want to know, the source language, type the word, and search. MeteoTrad will show you the data, from there, you can choose another type of data or change the language.
 
 <br>
-
-
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
