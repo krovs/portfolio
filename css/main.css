@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);body{display:flex;min-height:100vh;flex-direction:column;background-color:#f6f6f6 !important;}
+main{flex:1 0 auto;}
+a{color:#b08daf !important;text-decoration:none;}
+a:hover{text-decoration:none;}
+b{color:#574957 !important;}
+h1, h2, h3, h4{color:#574957 !important;font-family:'Ubuntu', sans-serif;}
+.indextexts{font-family:'Ubuntu', sans-serif;color:#5a5a5a !important;font-size:18px;line-height:35px;}
+.indextexts a:hover{background-color:#dbdbdb !important;border-radius:10%;}
+.hicont{margin-top:100px;width:300px;padding-left:40px;padding-right:40px;}
+.himage{margin-bottom:16px;}
+.hipara{margin-bottom:15px;}
+.indexhr{border:0;width:43%;background-color:#b08daf !important;height:1px;}
+.indexlatest{text-align:center;}
+@media (max-width:767px){.hicont{margin-top:0px;}
+}
+.indexicons{text-align:center;margin-top:20px;}
+.indexicons a{padding-left:10px;padding-right:10px;color:#574957 !important;}
+.indexicons a:hover{color:#b08daf !important;}
+.pagecont{padding-left:40px;padding-right:40px;padding-bottom:40px;max-width:600px;}
+@media (max-width:599px){.pagecont{width:100%;}
+}
+.pagehr{border:0;width:100%;background-color:#b08daf !important;height:1px;margin-bottom:10px;}
+.pagetitle{font-size:39px;}
+@media (max-width:599px){.pagetitle{font-size:26px;margin-top:0px;}
+}
+.navtext{font-family:'Ubuntu', sans-serif;}
+.navtext a{color:#574957 !important;}
+.navtext a:hover{color:#b08daf !important;}
+.navactive a{color:#b08daf !important;}
+.navcust{box-shadow:none !important;border-color:transparent !important;border-top:2px solid #b08daf !important;background-color:transparent !important;border-radius:0px;}
+.navbar .navbar-nav{display:inline-block !important;float:none !important;}
+.navbar .navbar-collapse{text-align:center;}
+@media (max-width:767px){.navbar{margin-bottom:0px;}
+}
+.footerlinks{text-align:center;margin-top:10px;margin-bottom:10px;font-size:12px;color:#a298a2 !important;}
+.footerlinks:hover{color:#574957 !important;}
+.protitle{font-size:21px;}
+.protitle a:hover{background-color:#dbdbdb !important;border-radius:10%;}
+.prosubtitle{font-size:16px;padding-left:36px;}
+.prodate{float:right;}
+@media (max-width:599px){.psubtitle{padding-left:0;}
+.prodate{float:none;}
+}
+.posttext{font-family:'Ubuntu', sans-serif;color:#5a5a5a !important;font-size:15px;text-align:justify;margin-bottom:30px;line-height:25px;}
+.posttext a:hover{background-color:#dbdbdb !important;border-radius:10%;}
+.posttext img{text-align:center;margin:0 auto;max-height:300px;}
+.posttext .thumbnail{background-color:transparent;border:none;}
+.posttitle{font-size:39px;}
+.postsubtitle{font-size:24px;margin-top:20px;}
+.pdate{padding-left:16px;}
+.postcont{padding-left:40px;padding-right:40px;padding-bottom:40px;max-width:600px;}
+@media (max-width:599px){.postcont{padding-left:30px;padding-right:30px;width:100%;}
+.postsubtitle{font-size:20px;margin-top:18px;}
+.posttitle{font-size:26px;}
+}
+.pbuttons{margin-top:16px;margin-bottom:16px;text-align:center;}
+.btn-custom{background-color:transparent;border:2px solid #b08daf !important;border-radius:10%;font-size:18px;font-family:'Ubuntu', sans-serif;}
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open .dropdown-toggle.btn-custom{color:#f6f6f6 !important;background-color:#b08daf !important;}
+.btn-custom-small{background-color:transparent;border:1px solid #b08daf !important;border-radius:10%;font-size:10px;font-weight:bolder;font-family:'Ubuntu', sans-serif;}
+.btn-custom-small:hover, .btn-custom-small:focus, .btn-custom-small:active, .btn-custom-small.active, .open .dropdown-toggle.btn-custom-small{color:#f6f6f6 !important;background-color:#b08daf !important;}
+.minibuttons{float:right;}
+.pcaret:hover{color:#574957 !important;}
+.modal-dialog{width:70%;}
+.modal-content{background:transparent;box-shadow:none;border:none;}
+.modal-header{border:none;margin:0;margin-right:16px;padding:0;}
+.modal-body{width:100%;}
+.modal-body img{text-align:center;margin:0 auto;}
+@media (max-width:1200px){.modal-dialog{width:100%;}
+}
+.notfound{margin-top:40px;text-align:center;}
+.notfound img{margin:0 auto;}
+.nottext{margin-top:30px;}
