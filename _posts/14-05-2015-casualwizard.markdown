@@ -15,8 +15,8 @@ This is my first game and was my university final project. A simple 3D game wher
 defeat all the enemies while collecting items along three different levels.
 
 With this project I learned a lot of videogame development basics, Unity, a lot of Blender and even some graphic design.
-<br>
 
+<br>
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
