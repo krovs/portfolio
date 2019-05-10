@@ -11,7 +11,7 @@ email: krovs.dev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Roberto Otero's portfolio
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://krovs.dev" # the base hostname & protocol for your site
+url: "https://rotero.dev" # the base hostname & protocol for your site
 twitter_username: rkrovs
 github_username:  krovs
 
