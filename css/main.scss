@@ -13,6 +13,10 @@ $bold-color:                #574957!important;
 $btnhover-color:            #dbdbdb!important;
 $footer-color:              #a298a2!important;
 
+$skillc1:               #ebbceb!important;
+$skillc2:               #bce2eb!important;
+$skillc3:               #bcebbe!important;
+
 
 body {
     display: flex;
@@ -71,7 +75,7 @@ h1,h2,h3,h4 {
 
 .hipara {
     margin-bottom:15px;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .skillall {
@@ -87,11 +91,22 @@ h1,h2,h3,h4 {
 }
 
 .skill {
-    background-color: #f8e4f8;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+    color: white;
+}
+
+.skillc1 {
+    background-color: $skillc1;
+    
+}
+.skillc2 {
+    background-color: $skillc2;
+}
+.skillc3 {
+    background-color: $skillc3;
 }
 
 .indexhr {
@@ -113,6 +128,7 @@ h1,h2,h3,h4 {
 
 .indexicons {
     text-align: center;
+    font-size: 2.3rem;
     margin-top: 20px;
     a {
         padding-left: 10px;

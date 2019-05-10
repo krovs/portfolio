@@ -11,7 +11,7 @@ layout: default
             <span class="glyphicon glyphicon-time" aria-hidden="true"> </span> {{ page.date | date: '%d.%m.%Y' }}
             <span class="minibuttons">
                 {% if page.gplay %}
-                    <a class="btn btn-custom-small btn-xs" href="{{ page.gplay }}" role="button"><i class="fa fa-android"></i> Install</a>
+                    <a class="btn btn-custom-small btn-xs" href="{{ page.gplay }}" role="button"><i class="fab fa-google-play"></i> Install</a>
                 {% endif %}
 
                 {% if page.ghub %}
@@ -50,7 +50,7 @@ layout: default
 
         <div class="pbuttons">
             {% if page.gplay %}
-                <a class="btn btn-custom btn-lg" href="{{ page.gplay }}" role="button"><i class="fa fa-android fa-lg"></i> Install</a>
+                <a class="btn btn-custom btn-lg" href="{{ page.gplay }}" role="button"><i class="fab fa-google-play fa-lg"></i> Install</a>
             {% endif %}
 
             {% if page.ghub %}
