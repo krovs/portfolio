@@ -1,0 +1,50 @@
+---
+layout: page
+title: HackerOne
+permalink: /h1
+nav: h1
+---
+
+<div class="row">
+    <h2>Bounties</h2>
+</div>
+
+{% for post in site.h1 reversed %}
+    <div class="row">
+        <h3 class="protitle"><a href="{{ post.url }}">{{ post.title }} </a>
+        <small  class="prodate"> {{ post.date | date: '%d.%m.%Y' }}</small></h3>
+    </div>
+{% endfor %}
+
+
+<br>
+
+
+<div class="row">
+    <h2>CTF</h2>
+</div>
+
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Difficulty(Points)</th>
+            <th scope="col">Name</th>
+            <th scope="col">Skills</th>
+            <th scope="col" class="text-right">Completion</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in site.h1ctf %}
+            <tr>
+                <td>{{ post.difficulty }}</td>
+                <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+                <td>{{ post.skills }}</td>
+                <td class="text-right" style="font-weight: bold">{{ post.progress }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

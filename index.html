@@ -8,57 +8,52 @@ nav: home
     <div class="row indextexts">
 
         <p align="center">
-            <img src="/images/me.png" class="img-responsive himage">
+            <img src="assets/images/me.png" class="img-responsive himage">
         </p>
 
         <p align="center" class="hipara">
-            <b>Robert O</b>
+            <b>krovs</b>
         </p>
 
         <p align="center" class="hipara">
-            <!--I'm a software engineer, master's degree student and gamer. I like <b>coding</b> things and <b>learning</b> new stuff.<br>-->
+            <!--I <br>-->
             <div class="skillall">
                 <div class="skillcont">
-                    <span class="skill skillc1">developer</span> 
+                    <span class="skill skillc1">coding</span> 
                 </div>
                 &bull;
                 <div class="skillcont">
-                    <span class="skill skillc2">designer</span> 
+                    <span class="skill skillc2">tech</span> 
                 </div>
                 &bull;
                 <div class="skillcont">
-                    <span class="skill skillc3">engineer</span>
+                    <span class="skill skillc3">infosec</span>
                 </div>
             </div>
         </p>
-        <!--
-        <p align="center">
-            Check out my <a href="{{site.baseurl}}/projects">portfolio.</a>
-        </p>
-        -->
     </div>
 
-    <!-- <hr class="indexhr"> 
+    <!-- <hr class="indexhr"> -->
 
     <div class="row indextexts">
 
-        {% for post in site.posts limit:1 %}
+        {% assign writeups = site.h1ctf | concat: site.htb | concat: site.h1 | sort: 'date' %}
+        {% for writeup in writeups reversed  limit: 1 %}
             <h4 class="indexlatest">
-                <small>latest thingy
+                latest post
                     <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </small>
+                    <a href="{{ writeup.url }}">[{{ writeup.type }}] {{ writeup.title }}</a>
             </h4>
         {% endfor %}
 
     </div>
-    -->
+    
     <div class="row indexicons">
         <a href="https://github.com/krovs" target="_blank" title="Github"><i class="fal fa-code-merge fa-fw"></i></a>
         <a href="https://play.google.com/store/apps/developer?id=Krovs" target="_blank" title="GooglePlay"><i class="fab fa-google-play fa-fw"></i></a>
-        <a href="https://www.redbubble.com/people/rkrovs" target="_blank" title="Redbubble"><i class="fal fa-tshirt fa-fw"></i></a>
-        <a href="mailto:r.oteroaragon@gmail.com" target="_blank" title="Email"><i class="fal fa-paper-plane fa-fw"></i></a>
         <a href="https://linkedin.com/in/rodev" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in fa-fw"></i></a>
+        <a href="https://www.hackthebox.eu/home/users/profile/192370" target="_blank" title="HackTheBox"><i class="fal fa-box-open"></i></a>
+        <a href="https://hackerone.com/kr0vs" target="_blank" title="HackerOne"><i class="far fa-bug"></i></a>
     </div>
 
 </div>

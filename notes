@@ -1,0 +1,11 @@
+all:
+    layout
+    title
+    date
+    type
+h1ctf: 
+    difficulty
+    skills
+    progress
+htb:
+    thumbnail>logo.png

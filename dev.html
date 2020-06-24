@@ -1,0 +1,16 @@
+---
+layout: page
+title: Dev
+permalink: /dev
+nav: dev
+---
+
+
+{% for post in site.dev reversed %}
+    <div class="row">
+        <h3 class="protitle"><a href="{{ post.url }}">{{ post.title }} </a><br>
+        <small  class="prodate"> {{ post.date | date: '%d.%m.%Y' }}</small></h3>
+        <h4 class="prosubtitle">{{ post.subtitle }}</h4>
+    </div>
+    
+{% endfor %}

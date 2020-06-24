@@ -3,10 +3,8 @@ layout: post
 title:  "Rabanoid"
 subtitle: "Check the transport schedule for Rabanales (Córdoba)"
 date: 28-01-2016
-categories: projects
 gplay: "https://play.google.com/store/apps/details?id=com.krovs.rabanoid"
 ghub: "https://github.com/krovs/rabanoid"
-permalink: /rabanoid
 ---
 
 Rabanoid is a simple app for checking the available transport schedule for the campus of Rabanales (Córdoba, Spain) in a quick and easy way.
@@ -20,7 +18,7 @@ I also put a banner ad at the bottom for science.
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <a href="#" class="thumbnail">
-             <img src="/images/raba1.png" class="img-responsive">
+             <img src="/assets/images/dev/raba1.png" class="img-responsive">
         </a>
     </div>
 </div>

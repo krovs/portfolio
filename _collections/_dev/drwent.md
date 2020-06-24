@@ -3,9 +3,7 @@ layout: post
 title:  "Drwent"
 subtitle: "A simple Gwent card viewer for Android"
 date: 14-06-2015
-categories: projects
 gplay: "https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"
-permalink: /drwent
 ---
 
 Drwent is a simple Android app that helps you view and track all the **Gwent** cards from The [Witcher 3](http://thewitcher.com/witcher3). It also shows each card image, ability, location and related quest.
@@ -37,17 +35,17 @@ I have permission from [CD PROJEKT RED](http://en.cdprojektred.com/) to use The 
 <div class="row">
     <div class="col-xs-4 col-sm-4 col-md-4">
         <a href="#" class="thumbnail">
-             <img src="/images/drw1.png" class="img-responsive">
+             <img src="/assets/images/dev/drw1.png" class="img-responsive">
         </a>
     </div>
      <div class="col-xs-4 col-sm-4 col-md-4">
         <a href="#" class="thumbnail">
-             <img src="/images/drw2.png" class="img-responsive">
+             <img src="/assets/images/dev/drw2.png" class="img-responsive">
         </a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4">
         <a href="#" class="thumbnail">
-             <img src="/images/drw3.png" class="img-responsive">
+             <img src="/assets/images/dev/drw3.png" class="img-responsive">
         </a>
     </div>
 </div>

@@ -3,9 +3,7 @@ layout: post
 title:  "MeteoTrad"
 subtitle: "An english/spanish/greek dictionary"
 date: 14-03-2014
-categories: projects
 link: http://meteotrad.com
-permalink: /meteotrad
 ---
 
 MeteoTrad is an english/spanish/greek meteorology dictionary for translators.
@@ -19,7 +17,7 @@ The usage is very simple, select what you want to know, the source language, typ
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <a href="#" class="thumbnail">
-            <img src="/images/meteo1.png" class="img-responsive">
+            <img src="/assets/images/dev/meteo1.png" class="img-responsive">
         </a>
     </div>
 </div>

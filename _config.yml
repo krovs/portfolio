@@ -6,11 +6,28 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Robert O
+title: krovs
 description: > # this means to ignore newlines until "baseurl:"
-  Robert O's portfolio
+  krovs' thingies
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rotero.dev" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+# Collections
+collections_dir: _collections
+
+collections:
+  dev:
+    output: true
+    permalink: /:collection/:name
+  h1ctf:
+    output: true
+    permalink: /:collection/:name
+  h1:
+    output: true
+    permalink: /:collection/:name
+  htb:
+    output: true
+    permalink: /:collection/:name
