@@ -37,12 +37,12 @@ nav: home
 
     <div class="row indextexts">
 
-        {% assign writeups = site.h1ctf | concat: site.htb | concat: site.h1 | sort: 'date' %}
-        {% for writeup in writeups reversed  limit: 1 %}
+        {% assign writeups = site.h1ctf | concat: site.htb | concat: site.h1 | reverse %}
+        {% for writeup in writeups limit: 1 %}
             <h4 class="indexlatest">
                 latest post
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                    <a href="{{ writeup.url }}">[{{ writeup.type }}] {{ writeup.title }}</a>
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                <a href="{{ writeup.url }}">[{{ writeup.type }}] {{ writeup.title }}</a>
             </h4>
         {% endfor %}
 

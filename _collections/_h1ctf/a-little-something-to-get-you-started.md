@@ -2,7 +2,7 @@
 layout: writeup
 title: A little something to get you started
 date: 07-06-2020
-difficulty: Trivial (1 / flag)
+difficulty: Trivial (1/flag)
 skills: Web
 progress: 1/1
 type: H1CTF
@@ -16,7 +16,7 @@ type: H1CTF
 * The page looks really plain
 * What is that image?
 
-
+------
 
 ## Flag0
 
