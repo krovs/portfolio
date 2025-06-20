@@ -1,24 +1,16 @@
 ---
 layout: post
-title:  "Casual Wizard"
+title:  "🧙🏼 Casual Wizard"
 subtitle: "A 3D adventure game for Android"
-date: 14-05-2015
+date: 2015-05-14
 link: "https://github.com/krovs/casual-wizard"
 ---
 
-Casual Wizard is a 3D adventure game for Android made with Unity3D.
+**Casual Wizard** is a 3D adventure game for `Android` made with `Unity3D`.
 
-This is my first game and was my university final project. A simple 3D game where the player controls a wizard who has to
-defeat all the enemies while collecting items along three different levels.
+This was my first game and my university final project. It is a simple 3D game where the player controls a wizard who must
+defeat all the enemies while collecting items across three different levels.
 
-With this project I learned a lot of videogame development basics, Unity, a lot of Blender and even some graphic design.
+With this project, I learned a lot about the basics of video game development, `Unity`, `Blender`, and even some graphic design.
 
-<br>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <a href="#" class="thumbnail">
-            <img src="/assets/images/dev/cw1.png" class="img-responsive">
-        </a>
-    </div>
-</div>
+![Casual Wizard Screenshot](/assets/images/dev/cw1.png)

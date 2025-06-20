@@ -1,23 +1,15 @@
 ---
 layout: post
-title:  "MeteoTrad"
-subtitle: "An english/spanish/greek dictionary"
-date: 14-03-2014
+title:  "🌦️ MeteoTrad"
+subtitle: "An English/Spanish/Greek dictionary"
+date: 2014-03-14
 link: http://meteotrad.com
 ---
 
-MeteoTrad is an english/spanish/greek meteorology dictionary for translators.
+MeteoTrad is an English/Spanish/Greek meteorological dictionary for translators.
 
-The frontend is made with PHP, jQuery and Bootstrap, and the backend with PHP and MySQL. This was my first and last time working with vanilla PHP.
+The frontend is built with `PHP`, `jQuery`, and `Bootstrap`, and the backend uses `PHP` and `MySQL`. This was my first and last time working with vanilla `PHP`.
 
-The usage is very simple, select what you want to know, the source language, type the word, and search. MeteoTrad will show you the data, from there, you can choose another type of data or change the language.
+**Usage is very simple**: select what you want to know, choose the source language, type the word, and search. MeteoTrad will show you the data. From there, you can choose another type of data or change the language.
 
-<br>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <a href="#" class="thumbnail">
-            <img src="/assets/images/dev/meteo1.png" class="img-responsive">
-        </a>
-    </div>
-</div>
+![Screenshot of MeteoTrad](/assets/images/dev/meteo1.png)

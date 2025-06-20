@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Drwent"
+title:  "🃏 Drwent"
 subtitle: "A simple Gwent card viewer for Android"
-date: 14-06-2015
+date: 2015-06-14
 link: "https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"
 ---
 
@@ -14,38 +14,19 @@ I was missing and where to get them.
 
 I used a SQLite database for storing all the artwork, better than a web service in this case, since the data is not going to be frequently updated.
 
-<br>
 **Updated! Now with Hearts of Stone new cards!**
-<br><br>
 
 With **Drwent** you can:
 
 * Check your collection
-* View each cards
+* View each card
 * Track each location
 * Learn the abilities
 * Know if it's from a quest
 * Know if it's from a DLC
 
-<br>
+![Drwent screenshot 1](/assets/images/dev/drw1.png)
+![Drwent screenshot 2](/assets/images/dev/drw2.png)
+![Drwent screenshot 3](/assets/images/dev/drw3.png)
+
 I have permission from [CD PROJEKT RED](http://en.cdprojektred.com/) to use The Witcher 3 Gwent artwork.
-
-<br>
-
-<div class="row">
-    <div class="col-xs-4 col-sm-4 col-md-4">
-        <a href="#" class="thumbnail">
-             <img src="/assets/images/dev/drw1.png" class="img-responsive">
-        </a>
-    </div>
-     <div class="col-xs-4 col-sm-4 col-md-4">
-        <a href="#" class="thumbnail">
-             <img src="/assets/images/dev/drw2.png" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-4 col-sm-4 col-md-4">
-        <a href="#" class="thumbnail">
-             <img src="/assets/images/dev/drw3.png" class="img-responsive">
-        </a>
-    </div>
-</div>
