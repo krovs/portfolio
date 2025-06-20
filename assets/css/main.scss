@@ -23,9 +23,9 @@ $dark-bold-color:           #ffffff!important;
 $dark-btnhover-color:       #333333!important;
 $dark-footer-color:         #757575!important;
 
-$dark-skillc1:              #C5A0F6!important;
-$dark-skillc2:              #F5A97F!important;
-$dark-skillc3:              #A6DA94!important;
+$dark-skillc1:              #89CBF1!important;
+$dark-skillc2:              #DBB1F1!important;
+$dark-skillc3:              #A0E2B3!important;
 
 // Define CSS custom properties for light and dark themes
 html[data-theme="light"] {
@@ -103,6 +103,12 @@ h1, h2, h3, h4 {
   padding-right: 40px;
 }
 
+@media (max-width: 767px) {
+  .hicont {
+    margin-top: 50px;
+  }
+}
+
 .himage {
   margin-bottom: 16px;
   border-radius: 50%;
@@ -153,12 +159,6 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-@media (max-width: 767px) {
-  .hicont {
-    margin-top: 0px;
-  }
-}
-
 .indexicons {
   text-align: center;
   font-size: 1.2rem;
@@ -173,14 +173,7 @@ h1, h2, h3, h4 {
   }
 }
 
-// Page layout------------------------------------------ */
-// POST
-.pagecont {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  max-width: 600px;
-}
+// Project list------------------------------------------ */
 
 @media (max-width: 599px) {
   .pagecont {
@@ -207,29 +200,6 @@ h1, h2, h3, h4 {
   }
 }
 
-// WRITEUP
-.writeupcont {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  max-width: 900px;
-}
-@media (max-width: 599px) {
-  .writeupcont {
-    width: 100%;
-  }
-}
-
-// Nav -------------------------------------------- */
-
-// The following navigation-related selectors are unused and can be removed:
-// .navtext
-// .navactive
-// .navcust
-// .navbar .navbar-nav
-// .navbar .navbar-collapse
-// .navbar
-
 // Footer ------------------------------------------
 
 .footerlinks {
@@ -244,7 +214,7 @@ h1, h2, h3, h4 {
   color: var(--color-bold);
 }
 
-// Projects ---------------------------------------------*/
+// Project list---------------------------------------------*/
 
 .protitle {
   font-size: 21px;
@@ -271,38 +241,7 @@ h1, h2, h3, h4 {
   }
 }
 
-// HTB ---------------------------------------------*/
-.htbtitle {
-  margin: 0px !important;
-  a:hover {
-    background-color: var(--color-btnhover);
-    border-radius: 10%;
-  }
-}
-
-.htbrow {
-  margin-top: 15px;
-  align-items: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: .5rem 0;
-}
-@media (max-width: 599px) {
-  .htbsubtitle {
-    padding-left: 0;
-  }
-  .htbdate {
-    float: none;
-  }
-}
-
-table {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-// Posts -------------------------------------------- */
-
+// Project details ------------------------------------------
 .posttext p {
   font-family: 'Ubuntu', sans-serif;
   color: var(--color-text);
@@ -328,7 +267,7 @@ table {
 }
 
 .posttitle {
-  font-size: 39px;
+  font-size: 34px;
 }
 .postsubtitle {
   font-size: 24px;
@@ -340,10 +279,12 @@ table {
 }
 
 .postcont {
-  padding-left: 40px;
-  padding-right: 40px;
+  // reduced from 600px
+  padding-left: 80px;
+  padding-right: 80px;
   padding-bottom: 40px;
-  max-width: 600px;
+  margin-top: 10px;
+  max-width: 1024px!important;
 }
 @media (max-width: 599px) {
   .postcont {
@@ -357,79 +298,6 @@ table {
   }
   .posttitle {
     font-size: 26px;
-  }
-}
-
-.pbuttons {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.btn-custom {
-  background-color: transparent;
-  border: 2px solid var(--color-main);
-  border-radius: 10%;
-  font-size: 18px;
-  font-family: 'Ubuntu', sans-serif;
-  color: var(--color-main);
-}
-
-.btn-custom:hover {
-  color: var(--color-background);
-  background-color: var(--color-main);
-}
-
-.btn-custom-small {
-  background-color: transparent;
-  border: 1px solid var(--color-main);
-  border-radius: 10%;
-  font-size: 10px;
-  font-weight: bolder;
-  font-family: 'Ubuntu', sans-serif;
-}
-.btn-custom-small:hover,
-.btn-custom-small:focus,
-.btn-custom-small:active,
-.btn-custom-small.active,
-.open .dropdown-toggle.btn-custom-small {
-  color: var(--color-background);
-  background-color: var(--color-main);
-}
-
-.minibuttons {
-  float: right;
-}
-
-.pcaret:hover {
-  color: var(--color-bold);
-}
-
-.modal-dialog {
-  width: 70%;
-}
-.modal-content {
-  background: transparent;
-  box-shadow: none;
-  border: none;
-}
-.modal-header {
-  border: none;
-  margin: 0;
-  margin-right: 16px;
-  padding: 0;
-}
-.modal-body {
-  width: 100%;
-  img {
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 1200px) {
-  .modal-dialog {
-    width: 100%;
   }
 }
 

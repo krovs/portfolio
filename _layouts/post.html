@@ -4,7 +4,7 @@ layout: default
 
 
 <div class="container postcont">
-    <div class="row">
+    <div>
 
         <h2 class="posttitle"><a class="pcaret" href="{{site.baseurl}}/projects"><i class="fa fa-caret-left fa-lg"> </i></a> {{ page.title }} <a href="{{ page.link }}"><i class="fa-solid fa-up-right-from-square"></i></a></h2>
         <h6 class="pdate">
@@ -13,8 +13,6 @@ layout: default
         {% if page.subtitle %}
             <h3 class="postsubtitle">{{ page.subtitle }} <a href="{{ page.link }}"></h3>
         {% endif %}
-
-       
 
         <div class="posttext">
             {{ content }}

@@ -2,17 +2,10 @@
 layout: default
 ---
 
-<div class="container pagecont">
-    <div class="row" >
-    {% if page.nav == 'projects' %}
-        <h3 class="pagetitle"><i class="fa-solid fa-flask"></i> {{ page.title }}</h3>
-    {% elsif page.nav == 'h1' %}
-        <h3 class="pagetitle"><i class="far fa-bug"></i> {{ page.title }}</h3>
-    {% else %}
-        <h3 class="pagetitle"><i class="far fa-code"></i> {{ page.title }}</h3>
-    {% endif %}
-    </div>
-    
+<div class="container">
+
+    <h3 class="pagetitle"><i class="fa-solid fa-flask"></i> {{ page.title }}</h3>
+
     <hr class="pagehr">
     <br>
     {{ content }}

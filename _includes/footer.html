@@ -10,40 +10,16 @@
 
 </footer>
 
-<!-- <script src="/assets/js/click.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="/assets/js/particles.js"></script>
 
 <script>
-  // Theme switcher logic
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('theme-switch');
-    var sun = btn ? btn.querySelector('.icon-sun') : null;
-    var moon = btn ? btn.querySelector('.icon-moon') : null;
-
-    function updateIcon(theme) {
-      if (!sun || !moon) return;
-      if (theme === 'dark') {
-        sun.style.display = 'none';
-        moon.style.display = '';
-      } else {
-        sun.style.display = '';
-        moon.style.display = 'none';
-      }
-    }
-
-    // Initial icon state
-    var currentTheme = document.documentElement.getAttribute('data-theme');
-    updateIcon(currentTheme);
-
-    if (btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        var current = document.documentElement.getAttribute('data-theme');
-        var next = current === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        updateIcon(next);
-      });
-    }
-  });
+  // Load click.js only on touch devices
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    var script = document.createElement('script');
+    script.src = '/assets/js/click.js';
+    document.body.appendChild(script);
+  }
 </script>
+
+<script src="/assets/js/themeswitcher.js"></script>
