@@ -1,4 +1,3 @@
 ![banner](assets/krovs.gif)
 
-[![Linkedin Badge](https://img.shields.io/badge/-rodev-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rodev/)](https://www.linkedin.com/in/rodev/)
-[![Website Badge](https://img.shields.io/badge/-krovs.dev-e34f26?style=flat-square&logo=HTML5&logoColor=white&link=https://krovs.dev/)](https://krovs.dev/)
+[![LinkedIn Badge](https://img.shields.io/badge/in%20LinkedIn-48B8D0?style=for-the-badge&logo=LN)](https://www.linkedin.com/in/rodev/)[![Site Badge](https://img.shields.io/badge/Website-EC9F05?style=for-the-badge&logo=htmx)](https://krovs.dev)[![HTB Badge](https://img.shields.io/badge/HackTheBox-60D394?style=for-the-badge&logo=hackthebox&logoColor=white)](https://app.hackthebox.com/profile/192370)[![THM Badge](https://img.shields.io/badge/TryHackMe-EE6055?style=for-the-badge&logo=tryhackme)](https://tryhackme.com/p/krovs)
