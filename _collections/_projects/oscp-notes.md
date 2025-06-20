@@ -10,9 +10,8 @@ link: "https://krovs.github.io/oscp-notes/"
 
 ![Banner](/assets/images/dev/oscp-notes.png)
 
-## 🦩 Notes
+### 🦩 Notes
 
-- 🦩 Home
 - 🔍 Information Gathering
 - 🕷️ Web Application Attacks
 - 🎣 Client-Side Attacks
@@ -25,7 +24,7 @@ link: "https://krovs.github.io/oscp-notes/"
 - ⚔️ AD Exploitation
 - 🏹 AD Lateral Movement
 
-## 📚 Study Resources
+### 📚 Study Resources
 
 - [PWK Course](https://portal.offsec.com/courses/pen-200-44065/overview)
 - Hackthebox Academy:
@@ -40,7 +39,7 @@ link: "https://krovs.github.io/oscp-notes/"
   - [Linux PrivEsc room](https://tryhackme.com/r/room/linuxprivesc)
   - [Windows PrivEsc room](https://tryhackme.com/r/room/windows10privesc)
 
-## 🤖 Machines
+### 🤖 Machines
 
 - [PWK Challenges](https://portal.offsec.com/courses/pen-200-44065/labs)
 - [LainKusanagi list of OSCP like machines](https://docs.google.com/spreadsheets/d/18weuz_Eeynr6sXFQ87Cd5F0slOj9Z6rt)
