@@ -3,7 +3,7 @@ layout: post
 title:  "Drwent"
 subtitle: "A simple Gwent card viewer for Android"
 date: 14-06-2015
-gplay: "https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"
+link: "https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"
 ---
 
 Drwent is a simple Android app that helps you view and track all the **Gwent** cards from The [Witcher 3](http://thewitcher.com/witcher3). It also shows each card image, ability, location and related quest.

@@ -3,8 +3,7 @@ layout: post
 title:  "Casual Wizard"
 subtitle: "A 3D adventure game for Android"
 date: 14-05-2015
-gplay: "https://play.google.com/store/apps/details?id=com.krovs.casualwizard"
-ghub: "https://github.com/krovs/casual-wizard"
+link: "https://github.com/krovs/casual-wizard"
 ---
 
 Casual Wizard is a 3D adventure game for Android made with Unity3D.

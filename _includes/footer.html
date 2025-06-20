@@ -1,41 +1,48 @@
 <footer>
     <div class="container footerlinks">
 
-        {% if page.nav != 'home' %}
-            <hr>
-            krovs@2015 | jekyll, jQuery, Sass, Bootstrap |
-        {% endif %}
+        
+        <hr>
+        krovs@2015 | jekyll, picocss, sass, js</i>
+        
 
     </div>
 
 </footer>
 
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{ "/assets/js/bootstrap.min.js" | prepend: {{ site.baseurl }}"></script>
-
+<script src="/assets/js/click.js"></script>
 
 <script>
-    jQuery(document).ready(function(){
-        //add active class to the current nav item ( jekyll nav variable )
-        $("#{{ page.nav }}").addClass("navactive");
+  // Theme switcher logic
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('theme-switch');
+    var sun = btn ? btn.querySelector('.icon-sun') : null;
+    var moon = btn ? btn.querySelector('.icon-moon') : null;
 
-        $('.thumbnail').click(function(){
-            event.preventDefault();
-          	$('.modal-body').empty();
-          	var title = $(this).parent('a').attr("title");
-          	$('.modal-title').html(title);
-            $($(this).html()).appendTo('.modal-body');
-            $('.modal-body img').css('max-height','auto');
-          	$('#myModal').modal({show:true});
-        });
+    function updateIcon(theme) {
+      if (!sun || !moon) return;
+      if (theme === 'dark') {
+        sun.style.display = 'none';
+        moon.style.display = '';
+      } else {
+        sun.style.display = '';
+        moon.style.display = 'none';
+      }
+    }
 
-        $('img').addClass('img-responsive');
+    // Initial icon state
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    updateIcon(currentTheme);
 
-	});
-
+    if (btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+      });
+    }
+  });
 </script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
