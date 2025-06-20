@@ -27,6 +27,10 @@ $dark-skillc1:              #89CBF1!important;
 $dark-skillc2:              #DBB1F1!important;
 $dark-skillc3:              #A0E2B3!important;
 
+$dark-skillc1-alt:          #1d5b5f!important;
+$dark-skillc2-alt:          #432b50!important;
+$dark-skillc3-alt:          #2a5a38!important;
+
 // Define CSS custom properties for light and dark themes
 html[data-theme="light"] {
   --color-background: #{$background-color};
@@ -50,6 +54,9 @@ html[data-theme="dark"] {
   --color-skillc1: #{$dark-skillc1};
   --color-skillc2: #{$dark-skillc2};
   --color-skillc3: #{$dark-skillc3};
+  --color-skillc1-alt: #{$dark-skillc1-alt};
+  --color-skillc2-alt: #{$dark-skillc2-alt};
+  --color-skillc3-alt: #{$dark-skillc3-alt};
 }
 
 // Use CSS custom properties throughout the styles
@@ -135,17 +142,31 @@ h1, h2, h3, h4 {
 
 .skill {
   padding: 2px 5px;
-  color: white;
+  border-radius: 10%;
+  color: rgb(255, 255, 255);
 }
+
 
 .skillc1 {
   background-color: var(--color-skillc1);
+  transition: background-color 2s;
+}
+.skillc1:hover {
+  background-color: var(--color-skillc1-alt);
 }
 .skillc2 {
   background-color: var(--color-skillc2);
+  transition: background-color 2s;
+}
+.skillc2:hover {
+  background-color: var(--color-skillc2-alt);
 }
 .skillc3 {
   background-color: var(--color-skillc3);
+  transition: background-color 2s;
+}
+.skillc3:hover {
+  background-color:var(--color-skillc3-alt);
 }
 
 .indexhr {
