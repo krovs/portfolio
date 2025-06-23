@@ -12,9 +12,12 @@ $bold-color:                #574957!important;
 $btnhover-color:            #dbdbdb!important;
 $footer-color:              #a298a2!important;
 
-$skillc1:                   #ebbceb!important;
-$skillc2:                   #bce2eb!important;
-$skillc3:                   #bcebbe!important;
+$skillc1:                   #ffffff!important;
+$skillc2:                   #ffffff!important;
+$skillc3:                   #ffffff!important;
+$skillc1-bg:                #bce2eb!important;
+$skillc2-bg:                #ebbceb!important;
+$skillc3-bg:                #bcebbe!important;
 
 $dark-background-color:     #24273A!important;
 $dark-text-color:           #CAD3F5!important;
@@ -23,13 +26,12 @@ $dark-bold-color:           #ffffff!important;
 $dark-btnhover-color:       #333333!important;
 $dark-footer-color:         #757575!important;
 
-$dark-skillc1:              #89CBF1!important;
-$dark-skillc2:              #DBB1F1!important;
-$dark-skillc3:              #A0E2B3!important;
-
-$dark-skillc1-alt:          #1d5b5f!important;
-$dark-skillc2-alt:          #432b50!important;
-$dark-skillc3-alt:          #2a5a38!important;
+$dark-skillc1:              #4e4e4e!important;
+$dark-skillc2:              #4e4e4e!important;
+$dark-skillc3:              #4e4e4e!important;
+$dark-skillc1-bg:           #89CBF1!important;
+$dark-skillc2-bg:           #DBB1F1!important;
+$dark-skillc3-bg:           #A0E2B3!important;
 
 // Define CSS custom properties for light and dark themes
 html[data-theme="light"] {
@@ -42,6 +44,9 @@ html[data-theme="light"] {
   --color-skillc1: #{$skillc1};
   --color-skillc2: #{$skillc2};
   --color-skillc3: #{$skillc3};
+  --color-skillc1-bg: #{$skillc1-bg};
+  --color-skillc2-bg: #{$skillc2-bg};
+  --color-skillc3-bg: #{$skillc3-bg};
 }
 
 html[data-theme="dark"] {
@@ -54,9 +59,9 @@ html[data-theme="dark"] {
   --color-skillc1: #{$dark-skillc1};
   --color-skillc2: #{$dark-skillc2};
   --color-skillc3: #{$dark-skillc3};
-  --color-skillc1-alt: #{$dark-skillc1-alt};
-  --color-skillc2-alt: #{$dark-skillc2-alt};
-  --color-skillc3-alt: #{$dark-skillc3-alt};
+  --color-skillc1-bg: #{$dark-skillc1-bg};
+  --color-skillc2-bg: #{$dark-skillc2-bg};
+  --color-skillc3-bg: #{$dark-skillc3-bg};
 }
 
 // Use CSS custom properties throughout the styles
@@ -143,31 +148,28 @@ h1, h2, h3, h4 {
 .skill {
   padding: 2px 5px;
   border-radius: 10%;
-  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 
 .skillc1 {
-  background-color: var(--color-skillc1);
+  background-color: var(--color-skillc1-bg);
   transition: background-color 2s;
+  color: var(--color-skillc1);
 }
-.skillc1:hover {
-  background-color: var(--color-skillc1-alt);
-}
+
 .skillc2 {
-  background-color: var(--color-skillc2);
+  background-color: var(--color-skillc2-bg);
   transition: background-color 2s;
+  color: var(--color-skillc2);
 }
-.skillc2:hover {
-  background-color: var(--color-skillc2-alt);
-}
+
 .skillc3 {
-  background-color: var(--color-skillc3);
+  background-color: var(--color-skillc3-bg);
   transition: background-color 2s;
+  color: var(--color-skillc3);
 }
-.skillc3:hover {
-  background-color:var(--color-skillc3-alt);
-}
+
 
 .indexhr {
   border: 0;
