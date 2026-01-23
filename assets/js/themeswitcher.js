@@ -22,11 +22,20 @@
     if (btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
-        var current = document.documentElement.getAttribute('data-theme');
-        var next = current === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        updateIcon(next);
+
+        const switchTheme = () => {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          updateIcon(next);
+        }
+
+        if (!document.startViewTransition) {
+          switchTheme();
+        } else {
+          document.startViewTransition(switchTheme);
+        }
       });
     }
   });

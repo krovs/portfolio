@@ -22,3 +22,6 @@ collections:
   projects:
     output: true
     permalink: /:collection/:name
+  homelab:
+    output: true
+    permalink: /:collection/:name

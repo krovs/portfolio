@@ -1,0 +1,10 @@
+---
+layout: page
+title: Homelab
+permalink: /homelab
+nav: homelab
+---
+
+{% assign homelab_post = site.homelab | where: "title", "Homelab" | first %}
+{{ homelab_post.content }}
+ 
