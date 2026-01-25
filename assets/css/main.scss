@@ -339,6 +339,13 @@ h1, h2, h3, h4 {
 
 // Theme images handling ---------------------------------
 
+.theme-image-light, .theme-image-dark {
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+
 .theme-image-light {
     display: none;
 }
