@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- END CONFIGURATION ---
 
   let placeholder = document.getElementById(placeholderId);
+  
+  // Only run this script if the placeholder element exists (i.e., we're on the home page)
+  if (!placeholder) {
+    return;
+  }
 
   fetch(feedUrl)
     .then((response) => {
@@ -19,12 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.text();
     })
     .then((str) => {
-      // Only create/append placeholder if data is fetched successfully
-      if (!placeholder) {
-        placeholder = document.createElement("div");
-        placeholder.id = placeholderId;
-        document.body.appendChild(placeholder);
-      }
       const data = new window.DOMParser().parseFromString(str, "text/xml");
       const firstItem = data.querySelector("item");
       console.log(firstItem);
