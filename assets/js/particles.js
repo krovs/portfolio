@@ -1,16 +1,62 @@
-/* ---- particles.js config ---- */
+// Function to get particle colors based on current theme
+function getParticleColors() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  return {
+    particleColor: isDark ? "#ffffff" : "#333333",
+    linkColor: isDark ? "#ffffff" : "#333333",
+    particleOpacity: isDark ? 0.2 : 0.4,
+    linkOpacity: isDark ? 0.2 : 0.3
+  };
+}
+
+// Function to update particle colors when theme changes
+function updateParticleColors() {
+  const colors = getParticleColors();
+  if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
+    const pJS = window.pJSDom[0].pJS;
+    
+    // Update particle color
+    pJS.particles.color.value = colors.particleColor;
+    pJS.particles.opacity.value = colors.particleOpacity;
+    pJS.particles.line_linked.color = colors.linkColor;
+    pJS.particles.line_linked.opacity = colors.linkOpacity;
+    
+    // Refresh particles
+    pJS.fn.particlesRefresh();
+  }
+}
+
+// Listen for theme changes
+document.addEventListener('DOMContentLoaded', function() {
+  // Watch for theme changes
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        updateParticleColors();
+      }
+    });
+  });
+  
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+});
+
+// Initialize particles with theme-appropriate colors
+const initialColors = getParticleColors();
 
 particlesJS("particles-js", {
   particles: {
     number: {
-      value: 40, // reduced from 380
+      value: 40,
       density: {
         enable: true,
         value_area: 800,
       },
     },
     color: {
-      value: "#ffffff",
+      value: initialColors.particleColor,
     },
     shape: {
       type: "circle",
@@ -28,7 +74,7 @@ particlesJS("particles-js", {
       },
     },
     opacity: {
-      value: 0.2,
+      value: initialColors.particleOpacity,
       random: false,
       anim: {
         enable: false,
@@ -50,13 +96,13 @@ particlesJS("particles-js", {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#ffffff",
-      opacity: 0.2,
+      color: initialColors.linkColor,
+      opacity: initialColors.linkOpacity,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 1.5, // reduced from 6
+      speed: 1.5,
       direction: "none",
       random: false,
       straight: false,

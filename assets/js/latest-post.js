@@ -1,13 +1,8 @@
-// assets/js/custom.js
-
 // Wait for the page content to be fully loaded before running the script
 document.addEventListener("DOMContentLoaded", function () {
-  // --- CONFIGURATION ---
-  // 1. Replace this with the URL to your MkDocs RSS feed
+
   const feedUrl = "https://krovs.github.io/seclogs/feed_rss_created.xml";
-  // 2. The ID of the placeholder element in your HTML
   const placeholderId = "latest-mkdocs-post";
-  // --- END CONFIGURATION ---
 
   let placeholder = document.getElementById(placeholderId);
   
