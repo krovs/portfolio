@@ -1,11 +1,10 @@
 // Wait for the page content to be fully loaded before running the script
 document.addEventListener("DOMContentLoaded", function () {
-
   const feedUrl = "https://krovs.github.io/seclogs/feed_rss_created.xml";
   const placeholderId = "latest-mkdocs-post";
 
   let placeholder = document.getElementById(placeholderId);
-  
+
   // Only run this script if the placeholder element exists (i.e., we're on the home page)
   if (!placeholder) {
     return;
@@ -26,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const title = firstItem.querySelector("title").textContent;
         const link = firstItem.querySelector("link").textContent;
         // Handle multiple categories
-        const categories = Array.from(firstItem.querySelectorAll("category")).map(cat => cat.textContent);
+        const categories = Array.from(
+          firstItem.querySelectorAll("category"),
+        ).map((cat) => cat.textContent);
         let category = categories[0] || "";
         if (categories.includes("HackTheBox")) {
           category = "HTB";

@@ -1,11 +1,11 @@
 // Function to get particle colors based on current theme
 function getParticleColors() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
   return {
     particleColor: isDark ? "#ffffff" : "#333333",
     linkColor: isDark ? "#ffffff" : "#333333",
     particleOpacity: isDark ? 0.2 : 0.4,
-    linkOpacity: isDark ? 0.2 : 0.3
+    linkOpacity: isDark ? 0.2 : 0.3,
   };
 }
 
@@ -14,32 +14,35 @@ function updateParticleColors() {
   const colors = getParticleColors();
   if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
     const pJS = window.pJSDom[0].pJS;
-    
+
     // Update particle color
     pJS.particles.color.value = colors.particleColor;
     pJS.particles.opacity.value = colors.particleOpacity;
     pJS.particles.line_linked.color = colors.linkColor;
     pJS.particles.line_linked.opacity = colors.linkOpacity;
-    
+
     // Refresh particles
     pJS.fn.particlesRefresh();
   }
 }
 
 // Listen for theme changes
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Watch for theme changes
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "data-theme"
+      ) {
         updateParticleColors();
       }
     });
   });
-  
+
   observer.observe(document.documentElement, {
     attributes: true,
-    attributeFilter: ['data-theme']
+    attributeFilter: ["data-theme"],
   });
 });
 
@@ -156,4 +159,3 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
-

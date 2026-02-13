@@ -171,7 +171,7 @@ class CursorSpecialEffects {
       0,
       0,
       this.globalWidth,
-      this.globalHeight
+      this.globalHeight,
     );
   }
 }
