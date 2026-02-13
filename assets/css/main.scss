@@ -4,14 +4,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata);
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 
-// Import local font
-@font-face {
-  font-family: 'Hurmit Nerd Font';
-  src: url('../fonts/HurmitNerdFont-Regular.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 // variables
 $background-color:          #f1e7d8!important;
@@ -118,7 +112,7 @@ h1, h2, h3, h4 {
 }
 
 .krovs {
-  font-family: 'Hurmit Nerd Font', monospace;
+  font-family: 'Fuzzy Bubbles';
 }
 
 .hicont {
