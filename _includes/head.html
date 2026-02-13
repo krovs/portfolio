@@ -31,11 +31,10 @@
   <script>
     // Function to apply the theme synchronously
     function applyTheme() {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       let storedTheme = localStorage.getItem('theme');
 
       if (!storedTheme) {
-        storedTheme = prefersDark ? 'dark' : 'light';
+        storedTheme = 'dark'; // Default to dark theme
       }
 
       document.documentElement.setAttribute('data-theme', storedTheme);
