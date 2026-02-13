@@ -42,7 +42,7 @@ nav: home
 
         {% assign projects = site.projects | reverse %}
         {% for project in projects limit: 1 %}
-            <h5 class="indexlatest">
+            <h6 class="indexlatest">
                 latest post
                 <i class="fa-solid fa-chevron-right"></i>
                 <span id="latest-mkdocs-post"><a href="{{ project.url }}"> {{ project.title }}</a></span>
