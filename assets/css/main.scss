@@ -5,8 +5,16 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata);
 
+// Import local font
+@font-face {
+  font-family: 'Hurmit Nerd Font';
+  src: url('../fonts/HurmitNerdFont-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // variables
-$background-color:          #fefbf5!important;
+$background-color:          #f1e7d8!important;
 $text-color:                #5a5a5a!important;
 $main-color:                #b08daf!important;
 $bold-color:                #574957!important;
@@ -99,7 +107,6 @@ h1, h2, h3, h4 {
 // Index ------------------------------------------
 
 .indextexts {
-  //font-family: 'Ubuntu', sans-serif;
   color: var(--color-text);
   font-size: 18px;
   line-height: 35px;
@@ -108,6 +115,10 @@ h1, h2, h3, h4 {
     background-color: var(--color-btnhover);
     border-radius: 10%;
   }
+}
+
+.krovs {
+  font-family: 'Hurmit Nerd Font', monospace;
 }
 
 .hicont {
