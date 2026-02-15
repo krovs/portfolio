@@ -8,7 +8,7 @@
 
 
 // variables
-$background-color:          #f1e7d8!important;
+$background-color:          #fcf3e7!important;
 $text-color:                #5a5a5a!important;
 $main-color:                #b08daf!important;
 $bold-color:                #574957!important;
@@ -68,13 +68,17 @@ html[data-theme="dark"] {
 }
 
 // Use CSS custom properties throughout the styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   background-color: var(--color-background);
   color: var(--color-text);
-    font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata", monospace;
 }
 
 main {
@@ -232,6 +236,10 @@ h1, h2, h3, h4 {
 }
 
 // Footer ------------------------------------------
+
+footer {
+  flex-shrink: 0;
+}
 
 .footerlinks {
   text-align: center;
