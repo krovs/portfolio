@@ -74,7 +74,12 @@ body {
   flex-direction: column;
   background-color: var(--color-background);
   color: var(--color-text);
-    font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata", monospace;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 main {
@@ -232,6 +237,10 @@ h1, h2, h3, h4 {
 }
 
 // Footer ------------------------------------------
+
+footer {
+  flex-shrink: 0;
+}
 
 .footerlinks {
   text-align: center;
