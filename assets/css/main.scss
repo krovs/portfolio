@@ -68,6 +68,10 @@ html[data-theme="dark"] {
 }
 
 // Use CSS custom properties throughout the styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -75,11 +79,6 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: "Inconsolata", monospace;
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
 }
 
 main {
