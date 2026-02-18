@@ -2,9 +2,17 @@
 ---
 @charset "utf-8";
 
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('../fonts/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata);
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
 
 
 // variables
@@ -97,7 +105,7 @@ b {
   color: var(--color-bold);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--color-bold);
   font-family: 'Ubuntu', sans-serif!important;
 }
@@ -157,7 +165,7 @@ h1, h2, h3, h4 {
 
 .skill {
   padding: 2px 5px;
-  border-radius: 10%;
+  border-radius: 15%;
   font-weight: bold;
 }
 
@@ -265,6 +273,7 @@ footer {
 .prosubtitle {
   font-size: 16px;
   padding-left: 36px;
+  font-family: Inconsolata, monospace!important;
 }
 
 .prodate {

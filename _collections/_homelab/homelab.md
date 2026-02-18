@@ -3,7 +3,7 @@ layout: page
 title: Homelab
 ---
 
-This is my forever WIP mini homelab where I self host services, try new services or learn about CVEs. Here is a high-level description of it.
+This is my forever WIP mini homelab where I self host services, try new ones or learn about CVEs. Here is a high-level description of the infra.
 
 ## Overview
 
