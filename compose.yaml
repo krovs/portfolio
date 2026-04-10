@@ -1,5 +1,6 @@
 services:
   jekyll:
+    container_name: jekyll
     image: ruby:3.2-bookworm
     working_dir: /srv/jekyll
     ports:
