@@ -9,6 +9,7 @@ krovs@github:~$ pfetch
  じしˍ,)ノ    focus: infra, cloud, iac, security
              stack: aws, terraform, k8s, python, bash
 
+
 krovs@github:~$ cat contact.yaml
 
 website:    https://krovs.dev
