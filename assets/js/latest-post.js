@@ -5,6 +5,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let placeholder = document.getElementById(placeholderId);
 
+  function parseDate(dateText) {
+    if (!dateText) {
+      return null;
+    }
+
+    const timestamp = Date.parse(dateText);
+    return Number.isNaN(timestamp) ? null : new Date(timestamp);
+  }
+
+  function getText(item, selector) {
+    return item.querySelector(selector)?.textContent?.trim() || "";
+  }
+
+  function renderMkdocsPost(link, category, title) {
+    const postLink = document.createElement("a");
+    postLink.href = link;
+    postLink.target = "_blank";
+    postLink.rel = "noopener noreferrer";
+    postLink.textContent = `[${category}] ${title}`;
+
+    placeholder.replaceChildren(postLink);
+  }
+
   // Only run this script if the placeholder element exists (i.e., we're on the home page)
   if (!placeholder) {
     return;
@@ -20,10 +43,20 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((str) => {
       const data = new window.DOMParser().parseFromString(str, "text/xml");
       const firstItem = data.querySelector("item");
-      console.log(firstItem);
       if (firstItem) {
-        const title = firstItem.querySelector("title").textContent;
-        const link = firstItem.querySelector("link").textContent;
+        const localDate = parseDate(placeholder.dataset.localDate);
+        const mkdocsDate = parseDate(getText(firstItem, "pubDate"));
+
+        if (localDate && mkdocsDate && mkdocsDate <= localDate) {
+          return;
+        }
+
+        const title = getText(firstItem, "title");
+        const link = getText(firstItem, "link");
+        if (!title || !link) {
+          return;
+        }
+
         // Handle multiple categories
         const categories = Array.from(
           firstItem.querySelectorAll("category"),
@@ -37,12 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
           category = "PG";
         }
 
-        const postHtml = `
-                <a href="${link}" target="_blank" rel="noopener noreferrer">
-                  [${category}] ${title}
-                </a>
-            `;
-        placeholder.innerHTML = postHtml;
+        renderMkdocsPost(link, category, title);
       } else {
         placeholder.innerHTML = "<p>No posts found.</p>";
       }

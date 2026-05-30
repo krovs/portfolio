@@ -40,10 +40,10 @@ nav: home
         {% assign projects = site.projects | reverse %}
         {% for project in projects limit: 1 %}
             <h6 class="indexlatest">
-                latest post
+                latest thingy
                 <i class="fa-solid fa-chevron-right"></i>
-                <span id="latest-mkdocs-post"><a href="{{ project.url }}"> {{ project.title }}</a></span>
-            </h5>
+                <span id="latest-mkdocs-post" data-local-date="{{ project.date | date_to_xmlschema }}"><a href="{{ project.url }}">{{ project.title }}</a></span>
+            </h6>
         {% endfor %}
 
     </div>
