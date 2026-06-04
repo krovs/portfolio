@@ -159,14 +159,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Fuzzy Bubbles';
 }
 
-.hicont {
+body main .container.hicont {
   margin-top: 100px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
 @media (max-width: 767px) {
-  .hicont {
+  body main .container.hicont {
     margin-top: 50px;
   }
 }
@@ -288,6 +288,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 599px) {
+  body main .container.hicont {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  footer .container.footerlinks {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .pagetitle {
     font-size: 26px;
     margin-top: 0px;
@@ -300,7 +310,7 @@ footer {
   flex-shrink: 0;
 }
 
-.footerlinks {
+footer .container.footerlinks {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -308,7 +318,7 @@ footer {
   color: var(--color-footer);
 }
 
-.footerlinks:hover {
+footer .container.footerlinks:hover {
   color: var(--color-bold);
 }
 
@@ -447,7 +457,7 @@ footer {
   padding-left: 16px;
 }
 
-.postcont {
+body main .container.postcont {
   padding-left: 80px;
   padding-right: 80px;
   padding-bottom: 40px;
@@ -455,9 +465,9 @@ footer {
   max-width: 1024px!important;
 }
 @media (max-width: 599px) {
-  .postcont {
-    padding-left: 30px;
-    padding-right: 30px;
+  body main .container.postcont {
+    padding-left: 12px;
+    padding-right: 12px;
     width: 100%;
   }
   .postsubtitle {
