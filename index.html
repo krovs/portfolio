@@ -39,20 +39,20 @@ nav: home
 
         {% assign projects = site.projects | reverse %}
         {% for project in projects limit: 1 %}
-            <h6 class="indexlatest">
-                latest thingy
-                <i class="fa-solid fa-chevron-right"></i>
-                <span id="latest-mkdocs-post" data-local-date="{{ project.date | date_to_xmlschema }}"><a href="{{ project.url }}">{{ project.title }}</a></span>
-            </h6>
+	            <h6 class="indexlatest">
+	                latest thingy
+	                {% include icon.html name="fa6-solid-chevron-right" %}
+	                <span id="latest-mkdocs-post" data-local-date="{{ project.date | date_to_xmlschema }}"><a href="{{ project.url }}">{{ project.title }}</a></span>
+	            </h6>
         {% endfor %}
 
     </div>
     
-    <div class="indexicons">
-        <a href="https://github.com/krovs" target="_blank" title="Github"><i class="fa-solid fa-code-merge"></i></a>
-        <a href="https://linkedin.com/in/rodev" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in fa-fw"></i></a>
-        <a href="https://app.hackthebox.com/profile/192370" target="_blank" title="HackTheBox"><i class="fa-solid fa-box-open"></i></a>
-        <a href="https://tryhackme.com/p/krovs" target="_blank" title="TryHackMe"><i class="fa-solid fa-laptop-code"></i></a>
-    </div>
+	    <div class="indexicons">
+	        <a href="https://github.com/krovs" target="_blank" title="Github" aria-label="Github">{% include icon.html name="fa6-solid-code-merge" %}</a>
+	        <a href="https://linkedin.com/in/rodev" target="_blank" title="Linkedin" aria-label="Linkedin">{% include icon.html name="fa6-brands-linkedin-in" %}</a>
+	        <a href="https://app.hackthebox.com/profile/192370" target="_blank" title="HackTheBox" aria-label="HackTheBox">{% include icon.html name="simple-icons-hackthebox" %}</a>
+	        <a href="https://tryhackme.com/p/krovs" target="_blank" title="TryHackMe" aria-label="TryHackMe">{% include icon.html name="simple-icons-tryhackme" %}</a>
+	    </div>
 
 </div>

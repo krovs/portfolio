@@ -6,10 +6,10 @@ layout: default
 <div class="container postcont">
     <div>
 
-        <h2 class="posttitle"><a class="pcaret" href="{{site.baseurl}}/projects"><i class="fa fa-caret-left fa-lg"> </i></a> {{ page.title }} <a href="{{ page.link }}"><i class="fa-solid fa-up-right-from-square"></i></a></h2>
-        <h6 class="pdate">
-            <i class="fa-solid fa-calendar-days"></i> {{ page.date | date: '%d.%m.%Y' }}
-        </h6>
+	        <h2 class="posttitle"><a class="pcaret" href="{{site.baseurl}}/projects">{% include icon.html name="fa6-solid-caret-left" %}</a> {{ page.title }} <a href="{{ page.link }}">{% include icon.html name="fa6-solid-up-right-from-square" %}</a></h2>
+	        <h6 class="pdate">
+	            {% include icon.html name="fa6-solid-calendar-days" %} {{ page.date | date: '%d.%m.%Y' }}
+	        </h6>
         {% if page.subtitle %}
             <h3 class="postsubtitle">{{ page.subtitle }}</h3>
         {% endif %}
