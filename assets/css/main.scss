@@ -162,6 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .krovs {
   font-family: 'Fuzzy Bubbles';
+  user-select: none;
 }
 
 body main .container.hicont {
@@ -204,6 +205,11 @@ body main .container.hicont {
   padding: 2px 5px;
   border-radius: 15%;
   font-weight: bold;
+  transition: box-shadow 0.25s ease;
+}
+
+a.skill:hover {
+  box-shadow: 0 0 12px 3px var(--color-main);
 }
 
 
@@ -563,4 +569,14 @@ body main .container.postcont {
   to {
     mask-size: 350vmax;
   }
+}
+
+/* Theme Switch ------------------------------ */
+
+#theme-switch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  padding: 12px 16px;
 }

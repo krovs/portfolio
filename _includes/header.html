@@ -1,3 +1,13 @@
+<a href="#light" id="theme-switch" aria-label="Switch theme" class="contrast">
+  <span class="icon-sun">
+    {% include icon.html name="tabler-sun-filled" %}
+  </span>
+  <span class="icon-moon" style="display:none;">
+    {% include icon.html name="tabler-moon-filled" %}
+  </span>
+</a>
+
+{% unless page.nav == "home" %}
 <nav>
 <ul>
 
@@ -7,17 +17,10 @@
     <li><a href="{{site.baseurl}}/projects" class="secondary">/projects</a></li>
     <li><a href="{{site.baseurl}}/homelab" class="secondary">/homelab</a></li>
 	    <li><a href="https://krovs.github.io/seclogs/" class="secondary">/seclogs</a></li>
-	    <a href="#light" id="theme-switch" aria-label="Switch theme" class="contrast">
-	      <span class="icon-sun">
-	        {% include icon.html name="tabler-sun-filled" %}
-	      </span>
-	      <span class="icon-moon" style="display:none;">
-	        {% include icon.html name="tabler-moon-filled" %}
-	      </span>
-	    </a>
   </ul>
 
   <ul>
 
   </ul>
 </nav>
+{% endunless %}
