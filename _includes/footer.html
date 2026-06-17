@@ -1,7 +1,7 @@
 <footer>
     <div class="container footerlinks">
 
-        <img class="footer-separator-icon" src="{{ "/assets/images/cheese.png" | prepend: site.baseurl }}" alt="" aria-hidden="true">
+        <span class="footer-separator-icon" aria-hidden="true"></span>
         krovs@2015 | jekyll, picocss, sass, js</i>
         
 
@@ -9,20 +9,76 @@
 
 </footer>
 
-<script src="/assets/js/latest-post.js"></script>
-<script src="/assets/js/post-image-zoom.js"></script>
-<script src="/assets/vendor/particles/particles.min.js"></script>
-<script src="/assets/js/particles.js"></script>
+<script src="/assets/js/themeswitcher.js"></script>
+
+<script>
+  (function () {
+    function onIdle(callback) {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(callback, { timeout: 2000 });
+      } else {
+        window.addEventListener("load", callback, { once: true });
+      }
+    }
+
+    function loadScript(src, onload) {
+      var script = document.createElement("script");
+      script.src = src;
+      script.async = true;
+      if (onload) script.onload = onload;
+      document.body.appendChild(script);
+    }
+
+    if (document.getElementById("latest-mkdocs-post")) {
+      onIdle(function () {
+        loadScript("/assets/js/latest-post.js");
+      });
+    }
+
+    if (document.querySelector(".posttext img")) {
+      loadScript("/assets/js/post-image-zoom.js");
+    }
+
+    if (document.querySelector("nav a.secondary")) {
+      onIdle(function () {
+        loadScript("/assets/js/hacktext.js");
+      });
+    }
+
+    if (document.getElementById("morph-text")) {
+      onIdle(function () {
+        loadScript("/assets/js/morphtext.js");
+      });
+    }
+
+    if (
+      document.getElementById("particles-js") &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+      !(navigator.connection && navigator.connection.saveData)
+    ) {
+      onIdle(function () {
+        loadScript("/assets/vendor/particles/particles.min.js", function () {
+          loadScript("/assets/js/particles.js");
+        });
+      });
+    }
+  })();
+</script>
 
 <script>
   // Load click.js only on touch devices
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-    var script = document.createElement('script');
-    script.src = '/assets/js/click.js';
-    document.body.appendChild(script);
+    var loadTouchScript = function () {
+      var script = document.createElement('script');
+      script.src = '/assets/js/click.js';
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(loadTouchScript, { timeout: 2000 });
+    } else {
+      window.addEventListener("load", loadTouchScript, { once: true });
+    }
   }
 </script>
-
-<script src="/assets/js/themeswitcher.js"></script>
-<script src="/assets/js/hacktext.js"></script>
-<script src="/assets/js/morphtext.js"></script>

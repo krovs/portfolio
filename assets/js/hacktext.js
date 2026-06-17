@@ -1,4 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+function onReady(callback) {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", callback);
+  } else {
+    callback();
+  }
+}
+
+onReady(() => {
   const chars = '!<>-_\\/[]{}=+*^?#@$%&|~;:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
   document.querySelectorAll('nav a.secondary').forEach(link => {

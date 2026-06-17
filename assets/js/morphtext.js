@@ -1,4 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+function onReady(callback) {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", callback);
+  } else {
+    callback();
+  }
+}
+
+onReady(() => {
   const el = document.getElementById('morph-text');
   if (!el) return;
 

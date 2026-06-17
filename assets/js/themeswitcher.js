@@ -18,9 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateLogo(theme) {
     if (!logoVideo) return;
-    var videoSrc = theme === "dark" ? "assets/images/darkme.webm" : "assets/images/lightme.webm";
+    var videoSrc = theme === "dark" ? logoVideo.dataset.darkSrc : logoVideo.dataset.lightSrc;
+    var currentSrc = logoVideo.getAttribute("src");
+
+    if (!videoSrc || currentSrc === videoSrc) {
+      return;
+    }
+
     logoVideo.src = videoSrc;
-    logoVideo.querySelector("source").src = videoSrc;
     logoVideo.load();
   }
 
@@ -44,8 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!document.startViewTransition) {
         switchTheme();
+        if (window.refreshParticleColors) window.refreshParticleColors();
       } else {
-        document.startViewTransition(switchTheme);
+        var transition = document.startViewTransition(switchTheme);
+        transition.ready.then(function () {
+          if (window.refreshParticleColors) window.refreshParticleColors();
+        });
       }
     });
   }

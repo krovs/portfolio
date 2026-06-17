@@ -1,5 +1,13 @@
-// Wait for the page content to be fully loaded before running the script
-document.addEventListener("DOMContentLoaded", function () {
+function onReady(callback) {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", callback);
+  } else {
+    callback();
+  }
+}
+
+// Wait for page content when needed, but also support idle-loaded execution.
+onReady(function () {
   const feedUrl = "https://krovs.github.io/seclogs/feed_rss_created.xml";
   const placeholderId = "latest-mkdocs-post";
 

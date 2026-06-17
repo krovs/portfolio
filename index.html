@@ -8,10 +8,18 @@ nav: home
     <div class="indextexts">
 
         <p align="center">
-            <video id="logo-video" src="assets/images/darkme.webm" class="img-responsive himage" autoplay muted loop playsinline>
-                <source src="assets/images/darkme.webm" type="video/webm">
+            <video id="logo-video" class="img-responsive himage" width="150" height="150" autoplay muted loop playsinline
+              data-dark-src="{{site.baseurl}}/assets/images/darkme.webm"
+              data-light-src="{{site.baseurl}}/assets/images/lightme.webm">
                 Your browser does not support the video tag.
             </video>
+            <script>
+              (function(){
+                var t = document.documentElement.getAttribute('data-theme');
+                var v = document.getElementById('logo-video');
+                v.src = t === 'light' ? v.dataset.lightSrc : v.dataset.darkSrc;
+              })();
+            </script>
         </p>
 
         <p align="center" class="hipara krovs">

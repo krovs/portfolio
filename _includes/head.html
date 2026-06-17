@@ -7,16 +7,23 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <!-- Preload critical resources -->
+
+  <link rel="preconnect" href="https://krovs.github.io">
+
   <link rel="preload" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" as="style">
-  
+  <link rel="preload" href="{{ "/assets/fonts/Inconsolata-Regular.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "/assets/fonts/Ubuntu-Regular.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  {% if page.nav == "home" %}
+  <link rel="preload" href="{{ "/assets/fonts/FuzzyBubbles-Regular.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "/assets/fonts/FuzzyBubbles-Bold.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  {% endif %}
+
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/particles.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/vendor/pico/pico.min.css" | prepend: site.baseurl }}">
-  
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  
+
   <script>
     // Function to apply the theme synchronously
     function applyTheme() {

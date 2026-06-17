@@ -10,6 +10,7 @@
     height: 100%;
     z-index: 0;
     pointer-events: none; /* allows clicks through the background */
+    view-transition-name: none;
   }
   
   main {
