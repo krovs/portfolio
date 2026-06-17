@@ -38,33 +38,33 @@
 }
 
 // variables
-$background-color:          #fff8f0!important;
-$text-color:                #5a5a5a!important;
-$main-color:                #b08daf!important;
-$bold-color:                #574957!important;
-$btnhover-color:            #dbdbdb!important;
-$footer-color:              #a298a2!important;
+$background-color:          #fff8f0;
+$text-color:                #5a5a5a;
+$main-color:                #b08daf;
+$bold-color:                #574957;
+$btnhover-color:            #dbdbdb;
+$footer-color:              #a298a2;
 
-$skillc1:                   #bce2eb!important;
-$skillc2:                   #ebbceb!important;
-$skillc3:                   #bcebbe!important;
-$skillc1-bg:                #4e4e4e!important;
-$skillc2-bg:                #4e4e4e!important;
-$skillc3-bg:                #4e4e4e!important;
+$skillc1:                   #bce2eb;
+$skillc2:                   #ebbceb;
+$skillc3:                   #bcebbe;
+$skillc1-bg:                #4e4e4e;
+$skillc2-bg:                #4e4e4e;
+$skillc3-bg:                #4e4e4e;
 
-$dark-background-color:     #24273A!important;
-$dark-text-color:           #c2c7d0!important;
-$dark-main-color:           #e2caff!important;
-$dark-bold-color:           #ffffff!important;
-$dark-btnhover-color:       #333333!important;
-$dark-footer-color:         #8891a4!important;
+$dark-background-color:     #24273A;
+$dark-text-color:           #c2c7d0;
+$dark-main-color:           #e2caff;
+$dark-bold-color:           #ffffff;
+$dark-btnhover-color:       #333333;
+$dark-footer-color:         #8891a4;
 
-$dark-skillc1:              #4e4e4e!important;
-$dark-skillc2:              #4e4e4e!important;
-$dark-skillc3:              #4e4e4e!important;
-$dark-skillc1-bg:           #aeded7!important;
-$dark-skillc2-bg:           #f0b0b1!important;
-$dark-skillc3-bg:           #eec8b5!important;
+$dark-skillc1:              #4e4e4e;
+$dark-skillc2:              #4e4e4e;
+$dark-skillc3:              #4e4e4e;
+$dark-skillc1-bg:           #aeded7;
+$dark-skillc2-bg:           #f0b0b1;
+$dark-skillc3-bg:           #eec8b5;
 
 // Define CSS custom properties for light and dark themes
 html[data-theme="light"] {
@@ -522,6 +522,10 @@ footer .container.footerlinks:hover {
   z-index: 9999;
 }
 
+[data-theme='light'] .image-zoom-overlay {
+  background: rgba(255, 255, 255, 0.88);
+}
+
 .image-zoom-overlay.is-open {
   display: flex;
 }
@@ -600,6 +604,7 @@ body main .container.postcont {
     max-width: 90%;
     height: auto;
     display: block;
+    cursor: zoom-in;
 }
 
 .theme-image-light {
@@ -627,7 +632,7 @@ body main .container.postcont {
 /* View Transition Animations ------------------------------ */
 
 ::view-transition-group(root) {
-  animation-timing-function: var(--expo-out);
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 ::view-transition-new(root) {

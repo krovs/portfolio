@@ -3,8 +3,6 @@ services:
     container_name: jekyll
     image: ruby:3.2-bookworm
     working_dir: /srv/jekyll
-    ports:
-      - "4000:4000"
     volumes:
       - .:/srv/jekyll
     command: >
@@ -14,5 +12,5 @@ services:
         gem install bundler &&
         bundle config set --local path vendor/bundle &&
         bundle install &&
-        bundle exec jekyll serve --host 0.0.0.0
+        bundle exec jekyll serve --host 0.0.0.0 --livereload
       "

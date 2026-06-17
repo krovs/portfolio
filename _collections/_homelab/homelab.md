@@ -9,8 +9,8 @@ This is my forever WIP mini homelab where I self host services, try new ones or 
 
 My homelab is built around GitOps and Infrastructure as Code (IaC) principles, combining containerized services and Kubernetes workloads with a backup strategy across multiple hardware devices.
 
-<img src="{{ site.baseurl }}/assets/images/homelab/networking.dark.png" alt="Homelab Overview" class="theme-image-dark" loading="lazy" decoding="async">
-<img src="{{ site.baseurl }}/assets/images/homelab/networking.light.png" alt="Homelab Overview" class="theme-image-light" loading="lazy" decoding="async">
+<img src="{{ site.baseurl }}/assets/images/homelab/networking.dark.webp" alt="Homelab Overview" class="theme-image-dark" loading="lazy" decoding="async">
+<img src="{{ site.baseurl }}/assets/images/homelab/networking.light.webp" alt="Homelab Overview" class="theme-image-light" loading="lazy" decoding="async">
 
 ### Hardware
 

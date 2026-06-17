@@ -10,5 +10,5 @@ For me, it is easier and quicker to remember basic (or non basic) stuff if I pra
 
 So, instead of deploying a whole infra, I created this basic project because I wanted to have specific simulation use cases with quick resolutions. This way, my brain can refresh the knowledge in a practical way instead of only reading notes and documentation.
 
-![alt text](/assets/images/dev/devopslabs.png){: loading="lazy" decoding="async" }
-![alt text](/assets/images/dev/devopslabs2.png){: loading="lazy" decoding="async" }
+![alt text](/assets/images/dev/devopslabs.webp){: loading="lazy" decoding="async" }
+![alt text](/assets/images/dev/devopslabs2.webp){: loading="lazy" decoding="async" }

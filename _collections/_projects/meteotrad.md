@@ -12,4 +12,4 @@ The frontend is built with `PHP`, `jQuery`, and `Bootstrap`, and the backend use
 
 **Usage is very simple**: select what you want to know, choose the source language, type the word, and search. MeteoTrad will show you the data. From there, you can choose another type of data or change the language.
 
-![Screenshot of MeteoTrad](/assets/images/dev/meteo1.png){: loading="lazy" decoding="async" }
+![Screenshot of MeteoTrad](/assets/images/dev/meteo1.webp){: loading="lazy" decoding="async" }

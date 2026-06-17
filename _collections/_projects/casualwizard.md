@@ -13,4 +13,4 @@ defeat all the enemies while collecting items across three different levels.
 
 With this project, I learned a lot about the basics of video game development, `Unity`, `Blender`, and even some graphic design.
 
-![Casual Wizard Screenshot](/assets/images/dev/cw1.png){: loading="lazy" decoding="async" }
+![Casual Wizard Screenshot](/assets/images/dev/cw1.webp){: loading="lazy" decoding="async" }

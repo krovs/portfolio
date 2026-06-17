@@ -7,12 +7,6 @@ function onReady(callback) {
 }
 
 onReady(function () {
-  const postText = document.querySelector(".posttext");
-
-  if (!postText) {
-    return;
-  }
-
   function isImageOnlyParagraph(node) {
     if (!node || node.tagName !== "P") {
       return false;
@@ -22,36 +16,38 @@ onReady(function () {
     return images.length > 0 && node.textContent.trim() === "";
   }
 
-  function groupImageRows() {
-    const paragraphs = Array.from(postText.querySelectorAll("p"));
+  function groupImageRows(container) {
+    if (!container) return;
+    var paragraphs = Array.from(container.querySelectorAll("p"));
 
-    paragraphs.forEach((paragraph) => {
+    paragraphs.forEach(function (paragraph) {
       if (!isImageOnlyParagraph(paragraph)) {
         return;
       }
 
-      const images = Array.from(paragraph.querySelectorAll("img"));
+      var images = Array.from(paragraph.querySelectorAll("img"));
 
       if (images.length < 2) {
         return;
       }
 
-      const row = document.createElement("div");
+      var row = document.createElement("div");
       row.className = "post-image-row";
 
       paragraph.parentNode.insertBefore(row, paragraph);
-      images.forEach((image) => row.appendChild(image));
+      images.forEach(function (image) { row.appendChild(image); });
       paragraph.remove();
     });
   }
 
-  groupImageRows();
+  var postText = document.querySelector(".posttext");
+  groupImageRows(postText);
 
-  const overlay = document.createElement("div");
+  var overlay = document.createElement("div");
   overlay.className = "image-zoom-overlay";
   overlay.setAttribute("aria-hidden", "true");
 
-  const zoomedImage = document.createElement("img");
+  var zoomedImage = document.createElement("img");
   zoomedImage.alt = "";
 
   overlay.appendChild(zoomedImage);
@@ -72,21 +68,18 @@ onReady(function () {
     document.body.style.overflow = "hidden";
   }
 
-  postText.addEventListener("click", function (event) {
-    const image = event.target.closest("img");
-
-    if (!image || !postText.contains(image)) {
-      return;
-    }
-
+  document.addEventListener("click", function (event) {
+    if (overlay.classList.contains("is-open")) return;
+    var image = event.target.closest("img");
+    if (!image) return;
+    var postCont = document.querySelector(".postcont");
+    if (!postCont || !postCont.contains(image)) return;
     event.preventDefault();
     openOverlay(image);
   });
 
   overlay.addEventListener("click", function (event) {
-    if (event.target === overlay) {
-      closeOverlay();
-    }
+    closeOverlay();
   });
 
   document.addEventListener("keydown", function (event) {

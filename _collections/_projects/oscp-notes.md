@@ -8,7 +8,7 @@ link: "https://krovs.github.io/oscp-notes/"
 
 **🍕 Web version**: [https://krovs.github.io/oscp-notes](https://krovs.github.io/oscp-notes/)
 
-![Banner](/assets/images/dev/oscp-notes.png){: loading="lazy" decoding="async" }
+![Banner](/assets/images/dev/oscp-notes.webp){: loading="lazy" decoding="async" }
 
 ### 🦩 Notes
 

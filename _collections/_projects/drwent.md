@@ -25,8 +25,8 @@ With **Drwent** you can:
 * Know if it's from a quest
 * Know if it's from a DLC
 
-![Drwent screenshot 1](/assets/images/dev/drw1.png){: loading="lazy" decoding="async" }
-![Drwent screenshot 2](/assets/images/dev/drw2.png){: loading="lazy" decoding="async" }
-![Drwent screenshot 3](/assets/images/dev/drw3.png){: loading="lazy" decoding="async" }
+![Drwent screenshot 1](/assets/images/dev/drw1.webp){: loading="lazy" decoding="async" }
+![Drwent screenshot 2](/assets/images/dev/drw2.webp){: loading="lazy" decoding="async" }
+![Drwent screenshot 3](/assets/images/dev/drw3.webp){: loading="lazy" decoding="async" }
 
 I have permission from [CD PROJEKT RED](http://en.cdprojektred.com/) to use The Witcher 3 Gwent artwork.
