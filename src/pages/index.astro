@@ -10,7 +10,7 @@ const latest = projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTi
 <Default nav="home">
   <div class="container hicont">
     <div class="indextexts">
-      <p align="center">
+      <p class="text-center">
         <video
           id="logo-video"
           class="img-responsive himage"
@@ -28,19 +28,19 @@ const latest = projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTi
         <script>
           (function(){
             var t = document.documentElement.getAttribute('data-theme');
-            var v = document.getElementById('logo-video');
+            var v = document.getElementById('logo-video') as HTMLVideoElement | null;
             if (v) {
-              v.src = t === 'light' ? v.dataset.lightSrc : v.dataset.darkSrc;
+              v.src = t === 'light' ? v.dataset.lightSrc! : v.dataset.darkSrc!;
             }
           })();
         </script>
       </p>
 
-      <p align="center" class="hipara krovs">
+      <p class="text-center hipara krovs">
         <b id="morph-text">krovs</b>
       </p>
 
-      <p align="center" class="hipara">
+      <p class="text-center hipara">
         <div class="skillall">
           <div class="skillcont">
             <a href="/projects" class="skill skillc1">devops</a>

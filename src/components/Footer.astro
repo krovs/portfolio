@@ -1,8 +1,4 @@
 ---
-export interface Props {
-  nav?: string;
-}
-const { nav } = Astro.props;
 ---
 
 <footer>
@@ -19,9 +15,9 @@ const { nav } = Astro.props;
 <script is:inline src="/assets/js/post-image-zoom.js"></script>
 <script is:inline src="/assets/js/client-router.js"></script>
 
-<script>
+<script is:inline>
   (function () {
-    function loadScript(src: string, onload?: () => void) {
+    function loadScript(src, onload) {
       var script = document.createElement("script");
       script.src = src;
       script.async = true;
@@ -43,7 +39,7 @@ const { nav } = Astro.props;
   })();
 </script>
 
-<script>
+<script is:inline>
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     var s = document.createElement('script');
     s.src = '/assets/js/click.js';
