@@ -12,15 +12,17 @@ window.initHackText = function () {
   document.querySelectorAll('nav a.secondary').forEach(link => {
     if (link.dataset.hackTextReady) return;
     link.dataset.hackTextReady = "true";
-    const originalText = link.textContent;
-    let interval = null;
+
+    var target = link.querySelector('span') || link;
+    var originalText = target.textContent;
+    var interval = null;
 
     link.addEventListener('mouseenter', () => {
       clearInterval(interval);
-      let iteration = 0;
+      var iteration = 0;
 
       interval = setInterval(() => {
-        link.textContent = originalText
+        target.textContent = originalText
           .split('')
           .map((char, index) => {
             if (char === ' ') return ' ';
@@ -32,7 +34,7 @@ window.initHackText = function () {
         iteration += 0.45;
 
         if (iteration > originalText.length) {
-          link.textContent = originalText;
+          target.textContent = originalText;
           clearInterval(interval);
         }
       }, 30);
@@ -40,7 +42,7 @@ window.initHackText = function () {
 
     link.addEventListener('mouseleave', () => {
       clearInterval(interval);
-      link.textContent = originalText;
+      target.textContent = originalText;
     });
   });
 };
