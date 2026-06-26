@@ -245,7 +245,7 @@ body main .container.hicont {
   padding: 2px 5px;
   border-radius: 15%;
   font-weight: bold;
-  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.06s ease;
 }
 
 a.skill:hover {
@@ -255,19 +255,19 @@ a.skill:hover {
 
 .skillc1 {
   background-color: var(--color-skillc1-bg);
-  transition: background-color 2s;
+  transition: background-color 1s;
   color: var(--color-skillc1);
 }
 
 .skillc2 {
   background-color: var(--color-skillc2-bg);
-  transition: background-color 2s;
+  transition: background-color 1s;
   color: var(--color-skillc2);
 }
 
 .skillc3 {
   background-color: var(--color-skillc3-bg);
-  transition: background-color 2s;
+  transition: background-color 1s;
   color: var(--color-skillc3);
 }
 
