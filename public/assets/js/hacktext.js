@@ -6,10 +6,12 @@ function onReady(callback) {
   }
 }
 
-onReady(() => {
+window.initHackText = function () {
   const chars = '!<>-_\\/[]{}=+*^?#@$%&|~;:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
   document.querySelectorAll('nav a.secondary').forEach(link => {
+    if (link.dataset.hackTextReady) return;
+    link.dataset.hackTextReady = "true";
     const originalText = link.textContent;
     let interval = null;
 
@@ -41,4 +43,6 @@ onReady(() => {
       link.textContent = originalText;
     });
   });
-});
+};
+
+onReady(window.initHackText);

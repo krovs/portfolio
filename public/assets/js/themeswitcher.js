@@ -1,5 +1,5 @@
 // Theme switcher logic
-document.addEventListener("DOMContentLoaded", function () {
+window.initThemeSwitcher = function () {
   var btn = document.getElementById("theme-switch");
   var sun = btn ? btn.querySelector(".icon-sun") : null;
   var moon = btn ? btn.querySelector(".icon-moon") : null;
@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
   updateIcon(currentTheme);
   updateLogo(currentTheme);
 
-  if (btn) {
+  if (btn && !btn.dataset.themeSwitcherReady) {
+    btn.dataset.themeSwitcherReady = "true";
     btn.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -58,4 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
+};
+
+document.addEventListener("DOMContentLoaded", window.initThemeSwitcher);

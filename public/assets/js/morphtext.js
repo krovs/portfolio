@@ -6,7 +6,12 @@ function onReady(callback) {
   }
 }
 
-onReady(() => {
+window.initMorphText = function () {
+  if (window.__morphTextInterval) {
+    clearInterval(window.__morphTextInterval);
+    window.__morphTextInterval = null;
+  }
+
   const el = document.getElementById('morph-text');
   if (!el) return;
 
@@ -43,5 +48,7 @@ onReady(() => {
     }, 30);
   }
 
-  setInterval(scrambleChar, 10000);
-});
+  window.__morphTextInterval = setInterval(scrambleChar, 10000);
+};
+
+onReady(window.initMorphText);

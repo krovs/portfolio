@@ -13,16 +13,11 @@ const { nav } = Astro.props;
 </footer>
 
 <script is:inline src="/assets/js/themeswitcher.js"></script>
-{nav === "home" && (
-  <>
-    <script is:inline src="/assets/js/latest-post.js"></script>
-    <script is:inline src="/assets/js/morphtext.js"></script>
-  </>
-)}
-{nav !== "home" && (
-  <script is:inline src="/assets/js/hacktext.js"></script>
-)}
+<script is:inline src="/assets/js/latest-post.js"></script>
+<script is:inline src="/assets/js/morphtext.js"></script>
+<script is:inline src="/assets/js/hacktext.js"></script>
 <script is:inline src="/assets/js/post-image-zoom.js"></script>
+<script is:inline src="/assets/js/client-router.js"></script>
 
 <script>
   (function () {

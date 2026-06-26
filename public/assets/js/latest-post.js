@@ -7,7 +7,7 @@ function onReady(callback) {
 }
 
 // Wait for page content when needed, but also support idle-loaded execution.
-onReady(function () {
+window.initLatestPost = function () {
   const feedUrl = "https://krovs.github.io/seclogs/feed_rss_created.xml";
   const placeholderId = "latest-mkdocs-post";
 
@@ -40,6 +40,11 @@ onReady(function () {
   if (!placeholder) {
     return;
   }
+
+  if (placeholder.dataset.latestPostReady) {
+    return;
+  }
+  placeholder.dataset.latestPostReady = "true";
 
   fetch(feedUrl)
     .then((response) => {
@@ -87,4 +92,6 @@ onReady(function () {
       console.error("Error fetching RSS feed:", error);
       // Do not modify HTML if fetch fails
     });
-});
+};
+
+onReady(window.initLatestPost);
