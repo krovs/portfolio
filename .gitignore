@@ -2,3 +2,12 @@ _site
 .sass-cache
 .jekyll-metadata
 /vendor
+
+# Astro
+node_modules
+dist
+.env
+.astro
+
+.agents
+skills-lock.json
