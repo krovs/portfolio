@@ -1,0 +1,59 @@
+---
+import { SITE } from "../config";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  nav?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = SITE.description,
+  nav,
+  canonical,
+} = Astro.props;
+
+const pageTitle = title ? `${title}` : SITE.title;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, SITE.url).href;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#583e58" />
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+
+  <link rel="preconnect" href="https://krovs.github.io" />
+
+  <link rel="preload" href="/assets/fonts/Inconsolata-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/Ubuntu-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  {nav === "home" && (
+    <>
+      <link rel="preload" href="/assets/fonts/FuzzyBubbles-Regular.woff2" as="font" type="font/woff2" crossorigin />
+      <link rel="preload" href="/assets/fonts/FuzzyBubbles-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    </>
+  )}
+
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="alternate" type="application/rss+xml" title={SITE.title} href={`${SITE.url}/feed.xml`} />
+
+  <script is:inline>
+    function applyTheme() {
+      let storedTheme = localStorage.getItem('theme');
+
+      if (!storedTheme) {
+        storedTheme = 'dark';
+      }
+
+      document.documentElement.setAttribute('data-theme', storedTheme);
+    }
+
+    applyTheme();
+  </script>
+</head>

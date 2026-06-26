@@ -1,0 +1,30 @@
+---
+import Icon from "./Icon.astro";
+
+export interface Props {
+  nav?: string;
+}
+const { nav } = Astro.props;
+---
+
+<a href="#light" id="theme-switch" aria-label="Switch theme" class="contrast">
+  <span class="icon-sun">
+    <Icon name="tabler-sun-filled" />
+  </span>
+  <span class="icon-moon" style="display:none;">
+    <Icon name="tabler-moon-filled" />
+  </span>
+</a>
+
+{nav !== "home" && (
+  <nav>
+    <ul></ul>
+    <ul>
+      <li><a href="/" class="secondary">/home</a></li>
+      <li><a href="/projects" class="secondary">/projects</a></li>
+      <li><a href="/homelab" class="secondary">/homelab</a></li>
+      <li><a href="https://krovs.github.io/seclogs/" class="secondary">/seclogs</a></li>
+    </ul>
+    <ul></ul>
+  </nav>
+)}

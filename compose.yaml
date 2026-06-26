@@ -1,19 +1,16 @@
 services:
-  jekyll:
-    container_name: jekyll
-    image: ruby:3.2-bookworm
-    working_dir: /srv/jekyll
+  astro:
+    container_name: astro
+    image: node:22-bookworm
+    working_dir: /srv/astro
+    user: "1000:1000"
     ports:
-      - "4000:4000"
-      - "35729:35729"
+      - "4321:4321"
     volumes:
-      - .:/srv/jekyll
+      - .:/srv/astro
     command: >
       bash -lc "
-        apt update &&
-        apt install -y build-essential git &&
-        gem install bundler &&
-        bundle config set --local path vendor/bundle &&
-        bundle install &&
-        bundle exec jekyll serve --host 0.0.0.0 --livereload
+        npm install &&
+        rm -f .astro/dev.json &&
+        npx astro dev --host 0.0.0.0
       "

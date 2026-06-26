@@ -1,0 +1,29 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.scss";
+import "../styles/particles.scss";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  nav?: string;
+  canonical?: string;
+}
+
+const { title, description, nav, canonical } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head title={title} description={description} nav={nav} canonical={canonical} />
+  <body>
+    <div id="particles-js"></div>
+    <main>
+      <Header nav={nav} />
+      <slot />
+    </main>
+    <Footer nav={nav} />
+  </body>
+</html>

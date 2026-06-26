@@ -1,0 +1,44 @@
+---
+import Default from "./Default.astro";
+import Icon from "../components/Icon.astro";
+
+export interface Props {
+  title: string;
+  date: Date;
+  subtitle?: string;
+  link?: string;
+  nav?: string;
+}
+
+const { title, date, subtitle, link, nav = "projects" } = Astro.props;
+---
+
+<Default title={title} nav={nav}>
+  <div class="container postcont">
+    <div>
+      <h2 class="posttitle">
+        <a class="pcaret" href="/projects" aria-label="Back to projects">
+          <Icon name="fa6-solid-caret-left" />
+        </a>{" "}
+        {title}{" "}
+        {link && (
+          <a href={link} aria-label="External link">
+            <Icon name="fa6-solid-up-right-from-square" />
+          </a>
+        )}
+      </h2>
+      <h6 class="pdate">
+        <Icon name="fa6-solid-calendar-days" />{" "}
+        {date.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        }).replace(/\//g, ".")}
+      </h6>
+      {subtitle && <h3 class="postsubtitle">{subtitle}</h3>}
+      <div class="posttext">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Default>

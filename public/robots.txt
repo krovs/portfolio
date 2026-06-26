@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://krovs.dev/sitemap-index.xml

@@ -1,0 +1,34 @@
+---
+import Default from "../layouts/Default.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Default title="Projects" nav="projects">
+  <div class="container postcont">
+    <h3 class="pagetitle">
+      <svg class="i0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1.13em" height="1em" viewBox="0 0 576 512"><path fill="currentColor" d="M0 80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v16h192V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-96c-26.5 0-48-21.5-48-48v-16H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-96c-26.5 0-48-21.5-48-48v-96c0-1.7.1-3.4.3-5L144 224H48c-26.5 0-48-21.5-48-48z"/></svg>
+      {" "}Projects
+    </h3>
+    <hr class="pagehr" />
+    <br />
+
+    {projects.map((project) => (
+      <div>
+        <h3 class="protitle">
+          <a href={`/projects/${project.id}`}>{project.data.title}</a><br />
+          <small class="prodate">
+            {project.data.date.toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+            }).replace(/\//g, ".")}
+          </small>
+        </h3>
+        <h4 class="prosubtitle">{project.data.subtitle}</h4>
+      </div>
+    ))}
+  </div>
+</Default>

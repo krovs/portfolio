@@ -1,0 +1,87 @@
+---
+import Default from "../layouts/Default.astro";
+import Icon from "../components/Icon.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+const latest = projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())[0];
+---
+
+<Default nav="home">
+  <div class="container hicont">
+    <div class="indextexts">
+      <p align="center">
+        <video
+          id="logo-video"
+          class="img-responsive himage"
+          width="150"
+          height="150"
+          autoplay
+          muted
+          loop
+          playsinline
+          data-dark-src="/assets/images/darkme.webm"
+          data-light-src="/assets/images/lightme.webm"
+        >
+          Your browser does not support the video tag.
+        </video>
+        <script>
+          (function(){
+            var t = document.documentElement.getAttribute('data-theme');
+            var v = document.getElementById('logo-video');
+            if (v) {
+              v.src = t === 'light' ? v.dataset.lightSrc : v.dataset.darkSrc;
+            }
+          })();
+        </script>
+      </p>
+
+      <p align="center" class="hipara krovs">
+        <b id="morph-text">krovs</b>
+      </p>
+
+      <p align="center" class="hipara">
+        <div class="skillall">
+          <div class="skillcont">
+            <a href="/projects" class="skill skillc1">devops</a>
+          </div>
+          &bull;
+          <div class="skillcont">
+            <a href="/homelab" class="skill skillc2">homelab</a>
+          </div>
+          &bull;
+          <div class="skillcont">
+            <a href="https://krovs.github.io/seclogs/" class="skill skillc3">infosec</a>
+          </div>
+        </div>
+      </p>
+    </div>
+
+    <div class="indextexts">
+      {latest && (
+        <h6 class="indexlatest">
+          latest thingy
+          <Icon name="fa6-solid-chevron-right" />
+          <span id="latest-mkdocs-post" data-local-date={latest.data.date.toISOString()}>
+            <a href={`/projects/${latest.id}`}>{latest.data.title}</a>
+          </span>
+        </h6>
+      )}
+    </div>
+
+    <div class="indexicons">
+      <a href="https://github.com/krovs" target="_blank" title="Github" aria-label="Github">
+        <Icon name="fa6-solid-code-merge" />
+      </a>
+      <a href="https://linkedin.com/in/rodev" target="_blank" title="Linkedin" aria-label="Linkedin">
+        <Icon name="fa6-brands-linkedin-in" />
+      </a>
+      <a href="https://app.hackthebox.com/profile/192370" target="_blank" title="HackTheBox" aria-label="HackTheBox">
+        <Icon name="simple-icons-hackthebox" />
+      </a>
+      <a href="https://tryhackme.com/p/krovs" target="_blank" title="TryHackMe" aria-label="TryHackMe">
+        <Icon name="simple-icons-tryhackme" />
+      </a>
+    </div>
+  </div>
+</Default>
