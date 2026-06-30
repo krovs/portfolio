@@ -1,13 +1,8 @@
-_site
-.sass-cache
-.jekyll-metadata
-/vendor
-
-# Astro
 node_modules
 dist
 .env
 .astro
+.pnpm-store
 
 .agents
 skills-lock.json
