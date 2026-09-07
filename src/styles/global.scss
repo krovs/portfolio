@@ -730,7 +730,7 @@ footer .container.footerlinks:hover {
 // Project list---------------------------------------------*/
 
 .protitle {
-  font-size: 26px;
+  font-size: 28px;
   color: var(--color-text);
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -743,6 +743,10 @@ footer .container.footerlinks:hover {
     color: var(--color-cyan-highlight);
     text-shadow: 0 0 8px var(--color-cyan-highlight);
   }
+}
+
+body main .container.postcont > div:first-of-type .protitle {
+  margin-top: 2rem;
 }
 
 .project-title-icon {
@@ -777,12 +781,22 @@ footer .container.footerlinks:hover {
 
   .protitle {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: baseline;
-    gap: .35rem .65rem;
+    align-items: flex-start;
+    gap: .15rem;
     margin-top: .5rem;
-    margin-bottom: .35rem;
+    margin-bottom: 0;
     font-size: 28px;
+    line-height: 1.1;
+  }
+
+  body main .container.postcont .protitle {
+    margin-top: .5rem;
+  }
+
+  body main .container.postcont > div:first-of-type .protitle {
+    margin-top: 1.2rem;
   }
 
   .protitle br {
@@ -795,16 +809,21 @@ footer .container.footerlinks:hover {
 
   .prosubtitle {
     padding-left: 0;
-    margin-top: .3rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2.25rem;
     font-size: 22px;
     line-height: 1.35;
   }
 
+  body main .container.postcont .prosubtitle {
+    margin-top: .25rem;
+  }
+
   .prodate {
     float: none;
-    margin-left: auto;
+    margin-left: 0;
     font-size: 17px;
+    line-height: 1;
     white-space: nowrap;
   }
 }
@@ -908,12 +927,12 @@ footer .container.footerlinks:hover {
 }
 
 .posttitle {
-  font-size: 34px;
+  font-size: 28px;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 .postsubtitle {
-  font-size: 24px;
+  font-size: 28px;
   margin-top: 20px;
   margin-bottom: 2rem;
 }
@@ -939,11 +958,21 @@ body main .container.postcont {
     width: 100%;
   }
   .postsubtitle {
-    font-size: 20px;
+    font-size: 28px;
     margin-top: 18px;
   }
   .posttitle {
-    font-size: 26px;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 600px) {
+  body main .container.postcont .pdate {
+    margin-top: .5rem;
+  }
+
+  body main .container.postcont .postsubtitle {
+    margin-top: 2rem;
   }
 }
 
