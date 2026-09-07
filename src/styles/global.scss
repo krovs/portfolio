@@ -185,6 +185,73 @@ nav ul:last-child {
   flex: 1;
 }
 
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  body.home-page main {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: clamp(7.5rem, 22vh, 14rem);
+  }
+
+  footer {
+    margin-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-nav {
+    position: fixed;
+    z-index: 1000;
+    inset: auto 0 0;
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: .3rem .25rem calc(.3rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--color-footer);
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Pixel Operator Mono', monospace;
+    font-size: .9rem;
+  }
+
+  .mobile-nav ul,
+  .mobile-nav ul:first-child,
+  .mobile-nav ul:last-child {
+    display: grid;
+    flex: none;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobile-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: .15rem;
+    color: var(--color-text);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .mobile-nav a:hover,
+  .mobile-nav a:focus-visible {
+    border-color: var(--color-main);
+    color: var(--color-main);
+    outline: none;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -393,6 +460,12 @@ a.skill:hover {
   text-align: center;
   font-size: 1.4rem;
   margin-top: 30px;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+
   .social-github { --social-hover-color: var(--color-icon-hover); }
   .social-linkedin { --social-hover-color: #74c7ec; }
   .social-hackthebox { --social-hover-color: #a6e3a1; }
@@ -467,6 +540,10 @@ a.skill:hover {
     padding-right: 12px;
   }
 
+  body.home-page main .container.hicont {
+    margin-top: 0;
+  }
+
   .himage {
     width: 120px;
     margin-bottom: 8px;
@@ -487,7 +564,7 @@ a.skill:hover {
   }
 
   .indexicons {
-    margin-top: 16px;
+    margin-top: 30px;
   }
 
   footer .container.footerlinks {

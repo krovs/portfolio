@@ -30,6 +30,13 @@
   }
 
   async function navigate(url, push) {
+    var target = new URL(url, window.location.href);
+    if (
+      target.pathname === window.location.pathname &&
+      target.search === window.location.search &&
+      target.hash === window.location.hash
+    ) return;
+
     var response = await fetch(url, { headers: { "X-Requested-With": "fetch" } });
     if (!response.ok) {
       window.location.href = url;
@@ -46,6 +53,7 @@
     }
 
     currentMain.innerHTML = nextMain.innerHTML;
+    document.body.classList.toggle("home-page", doc.body.classList.contains("home-page"));
     updateHead(doc);
     if (push) history.pushState({}, "", url);
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });

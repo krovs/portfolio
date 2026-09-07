@@ -17,7 +17,7 @@ const { nav } = Astro.props;
 </a>
 
 {nav && (
-  <nav>
+  <nav class="desktop-nav">
     <ul></ul>
     <ul>
       <li><a href="/" class="secondary">/home</a></li>
@@ -26,5 +26,14 @@ const { nav } = Astro.props;
       <li><a href="https://krovs.github.io/seclogs/" class="secondary"><span>/seclogs</span> <Icon name="fa6-solid-up-right-from-square" class="i1" /></a></li>
     </ul>
     <ul></ul>
+  </nav>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="/" class="secondary">/home</a></li>
+      <li><a href="/projects" class="secondary">/projects</a></li>
+      <li><a href="/homelab" class="secondary">/homelab</a></li>
+      <li><a href="https://krovs.github.io/seclogs/" class="secondary">/seclogs <Icon name="fa6-solid-up-right-from-square" class="i1" /></a></li>
+    </ul>
   </nav>
 )}
