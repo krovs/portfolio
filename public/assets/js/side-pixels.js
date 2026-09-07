@@ -22,8 +22,8 @@ window.initSidePixels = function () {
     function setup() {
       var rect = rail.getBoundingClientRect();
       var ratio = Math.min(window.devicePixelRatio || 1, 2);
-      var cols = Math.max(7, Math.floor(rect.width / 12));
-      var rows = Math.max(18, Math.floor(rect.height / 12));
+      var cols = Math.max(6, Math.floor(rect.width / 14));
+      var rows = Math.max(16, Math.floor(rect.height / 14));
 
       canvas.width = Math.floor(rect.width * ratio);
       canvas.height = Math.floor(rect.height * ratio);
@@ -37,6 +37,7 @@ window.initSidePixels = function () {
           y: Math.floor(Math.random() * rows),
           life: Math.floor(Math.random() * 18),
           tone: Math.random(),
+          accent: Math.random() < 0.055,
         };
       });
     }
@@ -56,10 +57,9 @@ window.initSidePixels = function () {
       frame += 1;
 
       var rect = rail.getBoundingClientRect();
-      var cell = 12;
+      var cell = 14;
       var main = cssColor("--color-main");
-      var text = cssColor("--color-text");
-      var footer = cssColor("--color-footer");
+      var accent = cssColor("--color-pixel-accent-1");
 
       context.clearRect(0, 0, rect.width, rect.height);
 
@@ -69,15 +69,16 @@ window.initSidePixels = function () {
           pixel.y = Math.floor(Math.random() * Math.max(24, rect.height / cell));
           pixel.life = 2 + Math.floor(Math.random() * 9);
           pixel.tone = Math.random();
+          pixel.accent = Math.random() < 0.055;
         } else {
           pixel.life -= 1;
         }
 
         if ((pixel.life + frame) % 3 === 0) return;
 
-        context.globalAlpha = pixel.tone > 0.82 ? 0.1 : pixel.tone < 0.18 ? 0.15 : 0.22;
-        context.fillStyle = pixel.tone > 0.82 ? footer : pixel.tone < 0.18 ? text : main;
-        context.fillRect(pixel.x * cell, pixel.y * cell, 5 + (pixel.tone > 0.7 ? 3 : 0), 5 + (pixel.tone < 0.3 ? 3 : 0));
+        context.globalAlpha = pixel.accent ? 0.72 : pixel.tone > 0.82 ? 0.1 : pixel.tone < 0.18 ? 0.15 : 0.22;
+        context.fillStyle = pixel.accent ? accent : main;
+        context.fillRect(pixel.x * cell, pixel.y * cell, 6 + (pixel.tone > 0.7 ? 3 : 0), 6 + (pixel.tone < 0.3 ? 3 : 0));
       });
 
       context.globalAlpha = 1;
