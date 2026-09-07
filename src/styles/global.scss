@@ -34,6 +34,22 @@
 }
 
 @font-face {
+  font-family: 'Raw Pixel';
+  src: url('/assets/fonts/rawpixel.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raw Pixel';
+  src: url('/assets/fonts/rawpixel-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Pixel Operator Mono';
   src: url('/assets/fonts/PixelOperatorMono-Bold.ttf') format('truetype');
   font-weight: 700;
@@ -81,7 +97,7 @@ $dark-skillc3-bg:           #eec8b5;
 // Define CSS custom properties for light and dark themes
 html[data-theme="light"] {
   --font-body: "JetBrains Mono", "Inconsolata", monospace;
-  --font-display: "JetBrains Mono", "Inconsolata", monospace;
+  --font-display: "Raw Pixel", monospace;
   --color-background: #{$background-color};
   --color-text: #{$text-color};
   --color-main: #{$main-color};
@@ -100,7 +116,7 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
   --font-body: "JetBrains Mono", "Inconsolata", monospace;
-  --font-display: "JetBrains Mono", "Inconsolata", monospace;
+  --font-display: "Raw Pixel", monospace;
   --color-background: #{$dark-background-color};
   --color-text: #{$dark-text-color};
   --color-main: #{$dark-main-color};
@@ -144,8 +160,8 @@ nav {
   align-items: center;
   padding-top: 2.25rem;
   padding-bottom: 0.5rem;
-  font-size: 1.1rem;
-  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-family: 'Pixel Operator Mono', monospace;
 }
 
 nav ul {
@@ -202,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-bold);
   font-family: var(--font-display);
   font-weight: 400!important;
+  letter-spacing: 0.04em;
   margin-top: 0;
   line-height: 1.25;
 }
@@ -323,6 +340,7 @@ a.skill:hover {
   text-align: center;
   font-family: 'Pixel Operator Mono', monospace;
   font-weight: 400!important;
+  letter-spacing: normal;
   font-size: 1.25rem;
   color: var(--color-footer);
 
@@ -343,6 +361,14 @@ a.skill:hover {
   font-family: var(--font-body);
 }
 
+.latest-post-icon {
+  width: 0.9em;
+  margin-right: 0.28em;
+  vertical-align: -0.2em;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 #latest-mkdocs-post a:hover {
   background-color: transparent;
   border-radius: 0;
@@ -359,6 +385,10 @@ a.skill:hover {
   text-align: center;
   font-size: 1.4rem;
   margin-top: 30px;
+  .social-github { --social-hover-color: var(--color-icon-hover); }
+  .social-linkedin { --social-hover-color: #74c7ec; }
+  .social-hackthebox { --social-hover-color: #a6e3a1; }
+  .social-tryhackme { --social-hover-color: #f38ba8; }
   a {
     padding-left: 15px;
     padding-right: 15px;
@@ -369,9 +399,9 @@ a.skill:hover {
     }
   }
   a:hover {
-    color: var(--color-icon-hover);
+    color: var(--social-hover-color);
     svg {
-      filter: drop-shadow(0 0 12px var(--color-icon-hover));
+      filter: drop-shadow(0 0 12px var(--social-hover-color));
     }
   }
 }
@@ -503,13 +533,24 @@ footer .container.footerlinks:hover {
     color: var(--color-main);
   }
   a:hover {
-    background-color: var(--color-btnhover);
-    border-radius: 10%;
-    color: var(--color-main);
+    background-color: transparent;
+    border-radius: 0;
+    color: var(--color-cyan-highlight);
+    text-shadow: 0 0 8px var(--color-cyan-highlight);
   }
 }
+
+.project-title-icon {
+  display: inline-block;
+  width: 1.05em;
+  height: 1.05em;
+  margin-right: 0.28em;
+  vertical-align: -0.14em;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
 .prosubtitle {
-  font-size: 24px;
+  font-size: 22px;
   padding-left: 36px;
   font-family: var(--font-body)!important;
   color: var(--color-text);

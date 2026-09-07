@@ -4,13 +4,14 @@ import Icon from "../components/Icon.astro";
 
 export interface Props {
   title: string;
+  icon?: string;
   date: Date;
   subtitle?: string;
   link?: string;
   nav?: string;
 }
 
-const { title, date, subtitle, link, nav = "projects" } = Astro.props;
+const { title, icon, date, subtitle, link, nav = "projects" } = Astro.props;
 ---
 
 <Default title={title} nav={nav}>
@@ -20,6 +21,7 @@ const { title, date, subtitle, link, nav = "projects" } = Astro.props;
         <a class="pcaret" href="/projects" aria-label="Back to projects">
           <Icon name="fa6-solid-caret-left" />
         </a>{" "}
+        {icon && <img class="project-title-icon" src={icon} alt="" />}
         {title}{" "}
         {link && (
           <a href={link} aria-label="External link">

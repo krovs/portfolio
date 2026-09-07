@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "🚆 Rabanoid"
+title:  "Rabanoid"
+icon: "/assets/images/dev/rabanoid.png"
 subtitle: "Check the transport schedule for Rabanales (Córdoba)"
 date: 2016-01-28
 link: "https://github.com/krovs/rabanoid"

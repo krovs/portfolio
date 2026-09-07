@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "🧙🏼 Casual Wizard"
+title:  "Casual Wizard"
+icon: "/assets/images/dev/casual.png"
 subtitle: "A 3D adventure game for Android"
 date: 2015-05-14
 link: "https://github.com/krovs/casual-wizard"

@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "🃏 Drwent"
+title:  "Drwent"
+icon: "/assets/images/dev/drwent.png"
 subtitle: "A simple Gwent card viewer for Android"
 date: 2015-06-14
 link: "https://play.google.com/store/apps/details?id=com.krovs.gwentcheck"

@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "🌵 DevOpsLabs"
+title:  "DevOpsLabs"
+icon: "/assets/images/dev/potion.png"
 subtitle: "DevOps mental notes as exercises"
 date: 2026-05-30
 link: "https://krovs.github.io/devopslabs/"

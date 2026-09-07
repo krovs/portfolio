@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "🌦️ MeteoTrad"
+title:  "MeteoTrad"
+icon: "/assets/images/dev/meteotrad.png"
 subtitle: "An English/Spanish/Greek dictionary"
 date: 2014-03-14
 link: http://meteotrad.com

@@ -18,7 +18,10 @@ projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     {projects.map((project) => (
       <div>
         <h3 class="protitle">
-          <a href={`/projects/${project.id}`}>{project.data.title}</a><br />
+          <a href={`/projects/${project.id}`}>
+            {project.data.icon && <img class="project-title-icon" src={project.data.icon} alt="" />}
+            {project.data.title}
+          </a><br />
           <small class="prodate">
             {project.data.date.toLocaleDateString("en-GB", {
               day: "2-digit",
