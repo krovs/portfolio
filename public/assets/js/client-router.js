@@ -32,6 +32,7 @@
   async function navigate(url, push) {
     var target = new URL(url, window.location.href);
     if (
+      push &&
       target.pathname === window.location.pathname &&
       target.search === window.location.search &&
       target.hash === window.location.hash
