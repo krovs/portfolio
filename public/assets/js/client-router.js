@@ -61,6 +61,9 @@
   }
 
   document.addEventListener("click", function (event) {
+    var openMenu = document.querySelector(".mobile-nav[open]");
+    if (openMenu && !openMenu.contains(event.target)) openMenu.removeAttribute("open");
+
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
     var link = event.target.closest("a");

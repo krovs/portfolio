@@ -202,44 +202,85 @@ nav ul:last-child {
     padding-top: clamp(7.5rem, 22vh, 14rem);
   }
 
-  footer {
-    margin-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
-  }
-
   .mobile-nav {
     position: fixed;
-    z-index: 1000;
-    inset: auto 0 0;
+    z-index: 10001;
+    isolation: isolate;
+    right: 1rem;
+    bottom: 15%;
     display: block;
-    width: auto;
-    margin: 0;
-    padding: .3rem .25rem calc(.3rem + env(safe-area-inset-bottom, 0px));
-    border-top: 1px solid var(--color-footer);
-    background: var(--color-background);
-    color: var(--color-text);
-    font-family: 'Pixel Operator Mono', monospace;
-    font-size: .9rem;
-  }
-
-  .mobile-nav ul,
-  .mobile-nav ul:first-child,
-  .mobile-nav ul:last-child {
-    display: grid;
-    flex: none;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0;
+    width: 44px;
     margin: 0;
     padding: 0;
+    border: 1px dashed var(--color-footer);
+    background: transparent;
+    color: var(--color-text);
+    font-family: 'Pixel Operator Mono', monospace;
+    font-size: 1rem;
+  }
+
+  .mobile-nav[open]::before {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    background: rgba(0, 0, 0, .38);
+    content: "";
+    pointer-events: none;
+  }
+
+  .mobile-nav summary {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    background: var(--color-background);
+    color: var(--color-text);
+    cursor: pointer;
     list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-nav ul {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + .6rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0;
+    width: min(180px, calc(100vw - 2rem));
+    padding: .35rem;
+    border: 1px solid var(--color-footer);
+    background: var(--color-background);
+    list-style: none;
+  }
+
+  .mobile-nav[open] summary,
+  .mobile-nav[open] ul {
+    box-shadow: 0 0 14px 2px var(--color-main);
   }
 
   .mobile-nav a {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
+    gap: .35rem;
+    min-height: 56px;
     padding: .15rem;
+    border: 0;
+    background: transparent;
     color: var(--color-text);
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
   }
@@ -249,6 +290,15 @@ nav ul:last-child {
     border-color: var(--color-main);
     color: var(--color-main);
     outline: none;
+  }
+
+  .mobile-nav-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }
 
@@ -534,6 +584,10 @@ a.skill:hover {
 }
 
 @media (max-width: 599px) {
+  body main {
+    font-size: 1.08em;
+  }
+
   body main .container.hicont {
     margin-top: 20px;
     padding-left: 12px;
@@ -545,13 +599,17 @@ a.skill:hover {
   }
 
   .himage {
-    width: 120px;
+    width: 128px;
     margin-bottom: 8px;
+  }
+
+  .krovs {
+    font-size: 34px;
   }
 
   .hipara {
     margin-bottom: 8px;
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .skillall {
@@ -560,11 +618,12 @@ a.skill:hover {
 
   .indexlatest {
     margin: .55rem 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .indexicons {
     margin-top: 30px;
+    font-size: 1.5rem;
   }
 
   footer .container.footerlinks {
@@ -575,7 +634,7 @@ a.skill:hover {
   }
 
   .pagetitle {
-    font-size: 26px;
+    font-size: 30px;
     margin-top: 0px;
   }
 }
@@ -688,6 +747,7 @@ footer .container.footerlinks:hover {
     gap: .35rem .65rem;
     margin-top: .5rem;
     margin-bottom: .35rem;
+    font-size: 28px;
   }
 
   .protitle br {
@@ -702,14 +762,14 @@ footer .container.footerlinks:hover {
     padding-left: 0;
     margin-top: .3rem;
     margin-bottom: 1.5rem;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.35;
   }
 
   .prodate {
     float: none;
     margin-left: auto;
-    font-size: 16px;
+    font-size: 17px;
     white-space: nowrap;
   }
 }

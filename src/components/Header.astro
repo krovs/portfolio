@@ -28,12 +28,16 @@ const { nav } = Astro.props;
     <ul></ul>
   </nav>
 
-  <nav class="mobile-nav" aria-label="Mobile navigation">
+  <details class="mobile-nav">
+    <summary aria-label="Open navigation">
+      <svg class="mobile-nav-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 18H4v-2h16zm0-5H4v-2h16zm0-5H4V6h16z"/></svg>
+      <span class="mobile-nav-sr-only">Open navigation</span>
+    </summary>
     <ul>
       <li><a href="/" class="secondary">/home</a></li>
       <li><a href="/projects" class="secondary">/projects</a></li>
       <li><a href="/homelab" class="secondary">/homelab</a></li>
       <li><a href="https://krovs.github.io/seclogs/" class="secondary">/seclogs <Icon name="fa6-solid-up-right-from-square" class="i1" /></a></li>
     </ul>
-  </nav>
+  </details>
 )}
