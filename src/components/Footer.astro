@@ -3,7 +3,11 @@
 
 <footer>
   <div class="container footerlinks">
-    <span class="footer-separator-icon" aria-hidden="true"></span>
+    <span class="footer-separator-icon" aria-hidden="true">
+      <span class="footer-square footer-square-c1"></span>
+      <span class="footer-square footer-square-c2"></span>
+      <span class="footer-square footer-square-c3"></span>
+    </span>
     krovs@2015 | astro, sass, js
   </div>
 </footer>
@@ -14,30 +18,7 @@
 <script is:inline src="/assets/js/hacktext.js"></script>
 <script is:inline src="/assets/js/post-image-zoom.js"></script>
 <script is:inline src="/assets/js/client-router.js"></script>
-
-<script is:inline>
-  (function () {
-    function loadScript(src, onload) {
-      var script = document.createElement("script");
-      script.src = src;
-      script.async = true;
-      if (onload) script.onload = onload;
-      document.body.appendChild(script);
-    }
-
-    if (
-      document.getElementById("particles-js") &&
-      !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
-      !(navigator.connection && navigator.connection.saveData)
-    ) {
-      setTimeout(function () {
-        loadScript("/assets/vendor/particles/particles.min.js", function () {
-          loadScript("/assets/js/particles.js");
-        });
-      }, 100);
-    }
-  })();
-</script>
+<script is:inline src="/assets/js/side-pixels.js"></script>
 
 <script is:inline>
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {

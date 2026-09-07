@@ -19,7 +19,8 @@ const { title, description, nav, canonical } = Astro.props;
 <html lang="en">
   <Head title={title} description={description} nav={nav} canonical={canonical} />
   <body>
-    <div id="particles-js"></div>
+    <div class="pixel-rail pixel-rail-left" aria-hidden="true"></div>
+    <div class="pixel-rail pixel-rail-right" aria-hidden="true"></div>
     <main>
       <Header nav={nav} />
       <slot />
