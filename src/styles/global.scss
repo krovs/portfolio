@@ -251,6 +251,7 @@ nav ul:last-child {
     cursor: pointer;
     list-style: none;
     animation: mobile-menu-pulse 3.2s steps(2, end) infinite;
+    box-shadow: 0 0 8px 1px var(--color-pixel-accent-1);
     transform-origin: center;
   }
 
